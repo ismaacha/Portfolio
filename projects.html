@@ -1,0 +1,146 @@
+<!-- File: projects.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos – Ismael Achamrouk</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- CSS General -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="logo">Ismael Achamrouk</div>
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="about.html" class="nav-link">Sobre mí</a></li>
+          <li><a href="skills.html" class="nav-link">Habilidades</a></li>
+          <li><a href="projects.html" class="nav-link active">Proyectos</a></li>
+          <li><a href="experience.html" class="nav-link">Experiencia</a></li>
+          <li><a href="education.html" class="nav-link">Educación</a></li>
+          <li><a href="languages.html" class="nav-link">Idiomas</a></li>
+          <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
+          <li><a href="contact.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="theme-toggle">
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="nav-toggle" id="nav-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    </div>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="projects section" id="projects-section">
+    <div class="container">
+      <h2>Proyectos Destacados</h2>
+      <p>Estos son algunos de los proyectos en los que he trabajado, tanto estáticos como aplicaciones en Java.</p>
+      <div class="projects-grid">
+        <!-- Proyecto Estático 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/400x250" alt="Proyecto Portfolio Estático" />
+          </div>
+          <div class="project-content">
+            <h3>Portfolio Estático</h3>
+            <p>Un sitio web estático construido con HTML y CSS, totalmente responsive y optimizado para móviles. Incluye animaciones de entrada y un diseño minimalista.</p>
+            <p><strong>Tecnologías:</strong> HTML5, CSS3, Flexbox, Grid</p>
+            <ul>
+              <li>Diseño semántico y accesible.</li>
+              <li>Animaciones CSS en botones y elementos al hacer scroll.</li>
+              <li>Optimización de imágenes para carga rápida.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://ejemplo.com/portfolio-estatico" target="_blank">Ver en vivo</a>
+              <a href="https://github.com/tu-usuario/portfolio-estatico" target="_blank">Código fuente</a>
+            </div>
+          </div>
+        </div>
+        <!-- Proyecto Estático 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/400x250" alt="Landing Page Promoción" />
+          </div>
+          <div class="project-content">
+            <h3>Landing Page Promoción</h3>
+            <p>Landing page promocional para un producto ficticio, con formulario de suscripción, validación en JavaScript y animaciones CSS avanzadas.</p>
+            <p><strong>Tecnologías:</strong> HTML5, CSS3, JavaScript</p>
+            <ul>
+              <li>Formulario con validación en tiempo real (email, campos obligatorios).</li>
+              <li>Animaciones en scroll y hover.</li>
+              <li>Integración con FontAwesome para iconos.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://ejemplo.com/landing-promocion" target="_blank">Ver en vivo</a>
+              <a href="https://github.com/tu-usuario/landing-promocion" target="_blank">Código fuente</a>
+            </div>
+          </div>
+        </div>
+        <!-- Proyecto Java 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/400x250" alt="Gestor de Tareas en Java" />
+          </div>
+          <div class="project-content">
+            <h3>Gestor de Tareas (Java)</h3>
+            <p>Aplicación de escritorio para gestionar tareas. Permite crear, editar y eliminar tareas, guardando la información en un fichero local.</p>
+            <p><strong>Tecnologías:</strong> Java, Swing, Estructuras de ficheros</p>
+            <ul>
+              <li>Interfaz gráfica construida con Swing.</li>
+              <li>Serialización de objetos para persistencia de datos.</li>
+              <li>Validación básica de campos y manejo de excepciones.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://ejemplo.com/gestor-tareas.jar" target="_blank">Descargar .jar</a>
+              <a href="https://github.com/tu-usuario/gestor-tareas-java" target="_blank">Código fuente</a>
+            </div>
+          </div>
+        </div>
+        <!-- Proyecto Java 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/400x250" alt="Registro de Usuarios en Java" />
+          </div>
+          <div class="project-content">
+            <h3>Registro de Usuarios (Java)</h3>
+            <p>Aplicación de escritorio que permite registrar, editar y eliminar usuarios en una base de datos SQLite local.</p>
+            <p><strong>Tecnologías:</strong> Java, JDBC, SQLite</p>
+            <ul>
+              <li>Conexión y consultas a SQLite mediante JDBC.</li>
+              <li>Gestión de ventanas (JFrame) y validación de entradas.</li>
+              <li>Informes sencillos exportables a CSV.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://ejemplo.com/registro-usuarios.jar" target="_blank">Descargar .jar</a>
+              <a href="https://github.com/tu-usuario/registro-usuarios-java" target="_blank">Código fuente</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Ismael Achamrouk. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>

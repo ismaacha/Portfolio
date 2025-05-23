@@ -1,0 +1,631 @@
+/* File: css/style.css */
+
+/* ------------------------------------------------------------
+   1. Reset y Variables Globales
+   ------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables de color para tema claro */
+:root {
+  --bg-page: #f0f0f5;
+  --text-main: #c19a6b;
+  --text-secondary: #333333;
+  --text-muted: #777777;
+  --header-bg: rgba(255, 255, 255, 0.97);
+  --header-text: #1a1a1a;
+  --nav-link: #1a1a1a;
+  --nav-link-active: #a16822;
+  --divider: rgba(0, 0, 0, 0.1);
+
+  --hero-bg-start: #16391f;
+  --hero-bg-end: #4b4b68;
+  --hero-overlay: rgba(0, 0, 0, 0.3);
+  --hero-text: #fafafa;
+  --hero-subtext: #f0f0f5;
+
+  --btn-bg: #c19a6b;
+  --btn-bg-hover: #a68459;
+  --btn-text: #ffffff;
+
+  --card-bg: #ffffff;
+  --card-text: #1a1a1a;
+  --card-shadow: rgba(0, 0, 0, 0.08);
+
+  --link-accent: #c19a6b;
+
+  --skill-bar-bg: #e5e5e5;
+  --skill-bar-fill: #c19a6b;
+
+  --footer-bg: #06250e;
+  --footer-text: #ffffff;
+}
+
+/* Variables de color para tema oscuro */
+body.dark-mode {
+  --bg-page: #1e1e22;
+  --text-main: #c19a6b;
+  --text-secondary: #cccccc;
+  --text-muted: #aaaaaa;
+  --header-bg: rgba(20, 20, 25, 0.97);
+  --header-text: #f0f0f5;
+  --nav-link: #f0f0f5;
+  --nav-link-active: #c19a6b;
+  --divider: rgba(255, 255, 255, 0.1);
+
+  --hero-bg-start: #111114;
+  --hero-bg-end: #0c0c10;
+  --hero-overlay: rgba(0, 0, 0, 0.5);
+  --hero-text: #f0f0f5;
+  --hero-subtext: #e0e0e0;
+
+  --btn-bg: #a68459;
+  --btn-bg-hover: #8b6f47;
+  --btn-text: #b57f7f;
+
+  --card-bg: #2a2a2e;
+  --card-text: #f0f0f5;
+  --card-shadow: rgba(255, 255, 255, 0.4);
+
+  --link-accent: #c19a6b;
+
+  --skill-bar-bg: #3a3a3e;
+  --skill-bar-fill: #c19a6b;
+
+  --footer-bg: #111113;
+  --footer-text: #cccccc;
+}
+
+/* ------------------------------------------------------------
+   2. Estilos Base
+   ------------------------------------------------------------ */
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+a {
+  color: var(--link-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+  color: var(--text-main);
+}
+
+p {
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+}
+
+/* ------------------------------------------------------------
+   3. Header y Navegación
+   ------------------------------------------------------------ */
+.header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--header-bg);
+  box-shadow: 0 2px 6px var(--divider);
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--header-text);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-link {
+  font-weight: 600;
+  position: relative;
+  color: var(--nav-link);
+}
+
+.nav-link.active {
+  color: var(--nav-link-active);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--nav-link-active);
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--header-text);
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* ------------------------------------------------------------
+   4. Switch Tema Oscuro/Claro
+   ------------------------------------------------------------ */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+/* El contenedor del switch */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+/* Checkbox oculto */
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider */
+.theme-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: background-color 0.3s;
+  border-radius: 24px;
+}
+
+/* Círculo dentro del slider */
+.theme-switch .slider::before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: transform 0.3s;
+  border-radius: 50%;
+}
+
+/* Cuando el checkbox está marcado, cambiar fondo */
+.theme-switch input:checked + .slider {
+  background-color: #4a4a4a;
+}
+
+/* Mover el círculo al estado “on” */
+.theme-switch input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+/* ------------------------------------------------------------
+   5. Hero Section
+   ------------------------------------------------------------ */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    var(--hero-bg-start),
+    var(--hero-bg-end)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--hero-overlay);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  color: var(--hero-text);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: var(--hero-subtext);
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: var(--btn-bg-hover);
+}
+
+/* ------------------------------------------------------------
+   6. Tiles Grid (Index)
+   ------------------------------------------------------------ */
+.tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  margin-top: 40px;
+}
+
+.tile-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 10px var(--card-shadow);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: var(--card-text);
+}
+
+.tile-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+}
+
+.tile-card p {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.tile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 14px var(--card-shadow);
+}
+
+/* ------------------------------------------------------------
+   7. About Section
+   ------------------------------------------------------------ */
+#about-section {
+  background-color: var(--card-bg);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px var(--card-shadow);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-content {
+    margin-top: 20px;
+  }
+}
+
+/* ------------------------------------------------------------
+   8. Skills Section
+   ------------------------------------------------------------ */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+}
+
+.skill-item h3 {
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+}
+
+.skill-bar {
+  background-color: var(--skill-bar-bg);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 15px;
+  background-color: var(--skill-bar-fill);
+  border-radius: 20px;
+}
+
+/* ------------------------------------------------------------
+   9. Projects Section
+   ------------------------------------------------------------ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 6px 10px var(--card-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+}
+
+.project-content {
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content h3 {
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+}
+
+.project-content p {
+  flex: 1;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+}
+
+.project-content ul {
+  margin-bottom: 15px;
+  list-style: disc inside;
+  color: var(--text-main);
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.project-links a {
+  background-color: var(--header-text);
+  color: var(--btn-text);
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+.project-links a:hover {
+  background-color: var(--hero-bg-end);
+}
+
+/* ------------------------------------------------------------
+   10. Experience Section
+   ------------------------------------------------------------ */
+.experience-item {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px var(--card-shadow);
+  margin-bottom: 20px;
+}
+
+.experience-date {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ------------------------------------------------------------
+   11. Education Section
+   ------------------------------------------------------------ */
+.education-item {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px var(--card-shadow);
+  margin-bottom: 20px;
+}
+
+.education-date {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ------------------------------------------------------------
+   12. Languages Section
+   ------------------------------------------------------------ */
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  margin-top: 20px;
+}
+
+.language-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 10px var(--card-shadow);
+}
+
+.language-card h3 {
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+}
+
+.lang-level {
+  font-weight: 400;
+  color: var(--link-accent);
+}
+
+/* ------------------------------------------------------------
+   13. Hobbies Section
+   ------------------------------------------------------------ */
+.hobby-item {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px var(--card-shadow);
+  margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------------
+   14. Contact Section
+   ------------------------------------------------------------ */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.contact-info p,
+.contact-info a {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-main);
+}
+
+/* ------------------------------------------------------------
+   15. Footer
+   ------------------------------------------------------------ */
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 25px 0;
+}
+
+/* ------------------------------------------------------------
+   16. Responsive
+   ------------------------------------------------------------ */
+@media (max-width: 768px) {
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 60%;
+    background-color: var(--card-bg);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s;
+    box-shadow: -2px 0 6px var(--divider);
+  }
+  .nav-list.show {
+    right: 0;
+  }
+  .nav-link {
+    color: var(--nav-link);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  .languages-grid,
+  .tiles-grid {
+    grid-template-columns: 1fr;
+  }
+}
