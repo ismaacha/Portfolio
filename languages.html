@@ -1,4 +1,3 @@
-<!-- File: languages.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,16 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Idiomas – Ismael Achamrouk</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-  <!-- CSS General -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <!-- Header / Navbar -->
   <header class="header" id="header">
     <div class="container">
-      <div class="logo">Ismael Achamrouk</div>
+      <div class="logo">IA</div>
       <nav class="nav" id="nav-menu">
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link">Inicio</a></li>
@@ -29,85 +27,348 @@
           <li><a href="contact.html" class="nav-link">Contacto</a></li>
         </ul>
       </nav>
-      <div class="theme-switch-wrapper">
-      <label class="theme-switch" for="theme-toggle">
-        <input type="checkbox" id="theme-toggle" />
-        <span class="slider"></span>
-      </label>
-    </div>
-    <div class="nav-toggle" id="nav-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
+
+      <div class="header-actions">
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
     </div>
   </header>
 
   <!-- Languages Section -->
-  <section class="languages section" id="languages-section">
+  <section class="languages-section section" id="languages-section">
     <div class="container">
-      <h2>Idiomas</h2>
-      <p>Gracias a mi entorno multicultural y mis estudios, manejo los siguientes idiomas con distintos niveles:</p>
+      <div class="section-header">
+        <h2 class="section-title">Mis Idiomas</h2>
+        <p class="section-subtitle">Gracias a mi entorno multicultural y mis estudios, manejo los siguientes idiomas con distintos niveles</p>
+      </div>
+      
       <div class="languages-grid">
         <!-- Español -->
         <div class="language-card">
-          <h3>Español <span class="lang-level">(Nativo)</span></h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 100%;"></div>
+          <div class="language-header">
+            <div class="language-icon">
+              <i class="fas fa-language"></i>
+            </div>
+            <div>
+              <h3 class="language-title">Español</h3>
+              <span class="lang-level">Nativo</span>
+            </div>
           </div>
-          <p>Fluidez total en contexto técnico y profesional. Documentación, presentación de proyectos y negociaciones sin barreras.</p>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="spanish-bar">
+              <span class="skill-percent">100%</span>
+            </div>
+          </div>
+          
+          <div class="language-content">
+            <p>Fluidez total en contexto técnico y profesional. Documentación, presentación de proyectos y negociaciones sin barreras.</p>
+            
+            <div class="language-details">
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Comprensión nativa en todos los contextos</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Redacción técnica y profesional impecable</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Comunicación oral fluida en entornos profesionales</div>
+              </div>
+            </div>
+          </div>
         </div>
+        
         <!-- Catalán -->
         <div class="language-card">
-          <h3>Catalán <span class="lang-level">(Nativo)</span></h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 100%;"></div>
+          <div class="language-header">
+            <div class="language-icon">
+              <i class="fas fa-flag"></i>
+            </div>
+            <div>
+              <h3 class="language-title">Catalán</h3>
+              <span class="lang-level">Nativo</span>
+            </div>
           </div>
-          <p>Comunicación escrita y oral natural en proyectos locales y colaboraciones en comunidades de desarrolladores de Cataluña.</p>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="catalan-bar">
+              <span class="skill-percent">100%</span>
+            </div>
+          </div>
+          
+          <div class="language-content">
+            <p>Comunicación escrita y oral natural en proyectos locales y colaboraciones en comunidades de desarrolladores de Cataluña.</p>
+            
+            <div class="language-details">
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Dominio completo en entornos profesionales</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Experiencia en proyectos locales catalanes</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Capacidad para documentación técnica en catalán</div>
+              </div>
+            </div>
+          </div>
         </div>
+        
         <!-- Árabe -->
         <div class="language-card">
-          <h3>Árabe <span class="lang-level">(Intermedio)</span></h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 70%;"></div>
+          <div class="language-header">
+            <div class="language-icon">
+              <i class="fas fa-mosque"></i>
+            </div>
+            <div>
+              <h3 class="language-title">Árabe</h3>
+              <span class="lang-level">Intermedio</span>
+            </div>
           </div>
-          <p>Manejo de conversaciones complejas, lectura de documentación original y redacción técnica. Acceso a recursos avanzados en árabe.</p>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="arabic-bar">
+              <span class="skill-percent">70%</span>
+            </div>
+          </div>
+          
+          <div class="language-content">
+            <p>Manejo de conversaciones complejas, lectura de documentación original y redacción técnica. Acceso a recursos avanzados en árabe.</p>
+            
+            <div class="language-details">
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Comprensión de conversaciones complejas</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Lectura de documentación técnica</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Redacción técnica básica</div>
+              </div>
+            </div>
+          </div>
         </div>
+        
         <!-- Amazigh -->
         <div class="language-card">
-          <h3>Amazigh (Dialecto Árabe) <span class="lang-level">(Nativo)</span></h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 100%;"></div>
+          <div class="language-header">
+            <div class="language-icon">
+              <i class="fas fa-globe-africa"></i>
+            </div>
+            <div>
+              <h3 class="language-title">Amazigh</h3>
+              <span class="lang-level">Nativo (Dialecto)</span>
+            </div>
           </div>
-          <p>Comprensión y expresión oral intermedias. Entiendo manuales y diálogos en este dialecto, conectando con mis raíces culturales.</p>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="amazigh-bar">
+              <span class="skill-percent">100%</span>
+            </div>
+          </div>
+          
+          <div class="language-content">
+            <p>Comprensión y expresión oral intermedias. Entiendo manuales y diálogos en este dialecto, conectando con mis raíces culturales.</p>
+            
+            <div class="language-details">
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Comprensión oral nativa</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Expresión oral fluida</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Comprensión de textos básicos</div>
+              </div>
+            </div>
+          </div>
         </div>
+        
         <!-- Inglés -->
         <div class="language-card">
-          <h3>Inglés <span class="lang-level">(B2 / Pre C1)</span></h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 90%;"></div>
+          <div class="language-header">
+            <div class="language-icon">
+              <i class="fas fa-globe-europe"></i>
+            </div>
+            <div>
+              <h3 class="language-title">Inglés</h3>
+              <span class="lang-level">B2 / Pre C1</span>
+            </div>
           </div>
-          <p>
-            <strong>Comprensión lectora:</strong> Documentación técnica, manuales y artículos sin dificultad.<br>
-            <strong>Expresión escrita y oral:</strong> Presentaciones, videollamadas y correos con fluidez.<br>
-            <strong>Vocabulario técnico:</strong> Uso de términos específicos en desarrollo web y programación. Estoy en camino a certificarme C1.
-          </p>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="english-bar">
+              <span class="skill-percent">90%</span>
+            </div>
+          </div>
+          
+          <div class="language-content">
+            <p>Dominio técnico avanzado con capacidad para comprender y producir documentación compleja. Comunicación fluida en contextos profesionales.</p>
+            
+            <div class="language-details">
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Documentación técnica sin dificultad</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Comunicación fluida en videollamadas</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Vocabulario técnico avanzado</div>
+              </div>
+            </div>
+            
+            <div class="certification">
+              <div class="cert-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="cert-text">
+                En camino a certificarme <strong>C1 Cambridge</strong>
+              </div>
+            </div>
+          </div>
         </div>
+        
         <!-- Francés -->
         <div class="language-card">
-          <h3>Francés <span class="lang-level">(Básico)</span></h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 20%;"></div>
+          <div class="language-header">
+            <div class="language-icon">
+              <i class="fas fa-frog"></i>
+            </div>
+            <div>
+              <h3 class="language-title">Francés</h3>
+              <span class="lang-level">Básico</span>
+            </div>
           </div>
-          <p>Conocimientos iniciales. Puedo mantener conversaciones sencillas y entender documentación de nivel introductorio.</p>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="french-bar">
+              <span class="skill-percent">20%</span>
+            </div>
+          </div>
+          
+          <div class="language-content">
+            <p>Conocimientos iniciales. Puedo mantener conversaciones sencillas y entender documentación de nivel introductorio.</p>
+            
+            <div class="language-details">
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Conversaciones básicas</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Comprensión de textos simples</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="detail-text">Vocabulario técnico básico</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Italiano (Próximo) -->
+        
+        <!-- Italiano -->
         <div class="language-card">
-          <h3>Italiano <span class="lang-level">(Básico)</span></h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 5%;"></div>
+          <div class="language-header">
+            <div class="language-icon">
+              <i class="fas fa-pizza-slice"></i>
+            </div>
+            <div>
+              <h3 class="language-title">Italiano</h3>
+              <span class="lang-level">Básico</span>
+            </div>
           </div>
-          <p>En proceso de aprendizaje. Planeo usarlo para conectar con comunidades de desarrollo en Europa y documentación adicional.</p>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="italian-bar">
+              <span class="skill-percent">5%</span>
+            </div>
+          </div>
+          
+          <div class="language-content">
+            <p>En proceso de aprendizaje. Planeo usarlo para conectar con comunidades de desarrollo en Europa y documentación adicional.</p>
+            
+            <div class="language-details">
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-book"></i>
+                </div>
+                <div class="detail-text">Actualmente en aprendizaje</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-bullseye"></i>
+                </div>
+                <div class="detail-text">Objetivo: Comunicación básica profesional</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">
+                  <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="detail-text">Para conectar con comunidades europeas</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -116,11 +377,126 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Ismael Achamrouk. Todos los derechos reservados.</p>
+      <div class="footer-content">
+        <div class="footer-col">
+          <div class="logo">Ismael Achamrouk</div>
+          <p class="footer-description">Desarrollador web apasionado por crear soluciones innovadoras y funcionales.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4 class="footer-title">Enlaces rápidos</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Sobre mí</a></li>
+            <li><a href="projects.html">Proyectos</a></li>
+            <li><a href="experience.html">Experiencia</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4 class="footer-title">Contacto</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-envelope"></i> contacto@ismaelachamrouk.com</li>
+            <li><i class="fas fa-phone"></i> +34 600 000 000</li>
+            <li><i class="fas fa-map-marker-alt"></i> Barcelona, España</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ismael Achamrouk. Todos los derechos reservados.</p>
+        <div class="footer-links">
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Términos de Uso</a>
+        </div>
+      </div>
     </div>
   </footer>
 
   <!-- JavaScript -->
-  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // === Menú móvil ===
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      
+      navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+      });
+      
+      // Cerrar menú al hacer clic en un enlace
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+          navToggle.classList.remove('active');
+        });
+      });
+      
+      // === Cambio de tema ===
+      const toggleSwitch = document.getElementById('theme-toggle');
+      
+      // Aplicar tema guardado al cargar
+      function loadTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+          document.body.classList.add('dark-mode');
+          toggleSwitch.checked = true;
+        }
+      }
+      
+      // Cambiar tema
+      function switchTheme(e) {
+        if (e.target.checked) {
+          document.body.classList.add('dark-mode');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.body.classList.remove('dark-mode');
+          localStorage.setItem('theme', 'light');
+        }
+      }
+      
+      toggleSwitch.addEventListener('change', switchTheme);
+      loadTheme();
+      
+      // === Animación de barras de idiomas ===
+      const languageBars = [
+        { id: 'spanish-bar', width: '100%' },
+        { id: 'catalan-bar', width: '100%' },
+        { id: 'arabic-bar', width: '70%' },
+        { id: 'amazigh-bar', width: '100%' },
+        { id: 'english-bar', width: '90%' },
+        { id: 'french-bar', width: '20%' },
+        { id: 'italian-bar', width: '5%' }
+      ];
+      
+      function animateLanguageBars() {
+        languageBars.forEach(bar => {
+          const element = document.getElementById(bar.id);
+          element.style.width = bar.width;
+        });
+      }
+      
+      // Iniciar animación cuando la sección sea visible
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateLanguageBars();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      
+      observer.observe(document.getElementById('languages-section'));
+    });
+  </script>
 </body>
 </html>

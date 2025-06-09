@@ -1,4 +1,3 @@
-<!-- File: skills.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,16 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Habilidades – Ismael Achamrouk</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-  <!-- CSS General -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <!-- Header / Navbar -->
   <header class="header" id="header">
     <div class="container">
-      <div class="logo">Ismael Achamrouk</div>
+      <div class="logo">IA</div>
       <nav class="nav" id="nav-menu">
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link">Inicio</a></li>
@@ -29,97 +27,290 @@
           <li><a href="contact.html" class="nav-link">Contacto</a></li>
         </ul>
       </nav>
-      <div class="theme-switch-wrapper">
-      <label class="theme-switch" for="theme-toggle">
-        <input type="checkbox" id="theme-toggle" />
-        <span class="slider"></span>
-      </label>
-    </div>
-    <div class="nav-toggle" id="nav-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
+
+      <div class="header-actions">
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Skills Detailed Section -->
-  <section class="skills section" id="skills-section">
+  <!-- Skills Section -->
+  <section class="skills-section section" id="skills-section">
     <div class="container">
-      <h2>Habilidades & Tecnologías</h2>
-      <p>Estas son las herramientas y lenguajes con los que trabajo habitualmente. Los niveles son aproximados según mi experiencia práctica:</p>
+      <div class="section-header">
+        <h2 class="section-title">Mis Habilidades</h2>
+        <p class="section-subtitle">Estas son las herramientas y tecnologías con las que trabajo habitualmente</p>
+      </div>
+      
+      <div class="skills-categories">
+        <button class="category-btn active" data-category="all">Todas</button>
+        <button class="category-btn" data-category="frontend">Frontend</button>
+        <button class="category-btn" data-category="backend">Backend</button>
+        <button class="category-btn" data-category="database">Bases de Datos</button>
+        <button class="category-btn" data-category="tools">Herramientas</button>
+      </div>
+      
       <div class="skills-grid">
         <!-- HTML5 -->
-        <div class="skill-item">
-          <h3>HTML5</h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 90%;"></div>
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-header">
+            <div class="skill-icon">
+              <i class="fab fa-html5"></i>
+            </div>
+            <div>
+              <h3 class="skill-title">HTML5</h3>
+              <span class="skill-level-text">Avanzado</span>
+            </div>
           </div>
-          <p>Construcción semántica de páginas web, SEO básico y accesibilidad.</p>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="html-bar">
+              <span class="skill-percent">90%</span>
+            </div>
+          </div>
+          
+          <p class="skill-description">Construcción semántica de páginas web, SEO básico y accesibilidad.</p>
+          
+          <div class="skill-tags">
+            <span class="skill-tag">Semántica</span>
+            <span class="skill-tag">SEO</span>
+            <span class="skill-tag">Accesibilidad</span>
+          </div>
         </div>
+        
         <!-- CSS3 -->
-        <div class="skill-item">
-          <h3>CSS3</h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 85%;"></div>
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-header">
+            <div class="skill-icon">
+              <i class="fab fa-css3-alt"></i>
+            </div>
+            <div>
+              <h3 class="skill-title">CSS3</h3>
+              <span class="skill-level-text">Avanzado</span>
+            </div>
           </div>
-          <p>Diseño responsive con Flexbox, Grid, animaciones y transiciones avanzadas.</p>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="css-bar">
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+          
+          <p class="skill-description">Diseño responsive con Flexbox, Grid, animaciones y transiciones avanzadas.</p>
+          
+          <div class="skill-tags">
+            <span class="skill-tag">Flexbox</span>
+            <span class="skill-tag">Grid</span>
+            <span class="skill-tag">Responsive</span>
+            <span class="skill-tag">Animaciones</span>
+          </div>
         </div>
+        
         <!-- JavaScript -->
-        <div class="skill-item">
-          <h3>JavaScript</h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 80%;"></div>
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-header">
+            <div class="skill-icon">
+              <i class="fab fa-js"></i>
+            </div>
+            <div>
+              <h3 class="skill-title">JavaScript</h3>
+              <span class="skill-level-text">Avanzado</span>
+            </div>
           </div>
-          <p>Manipulación del DOM, ES6+, fetch API, validación de formularios y lógica de negocio.</p>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="js-bar">
+              <span class="skill-percent">80%</span>
+            </div>
+          </div>
+          
+          <p class="skill-description">Manipulación del DOM, ES6+, fetch API, validación de formularios y lógica de negocio.</p>
+          
+          <div class="skill-tags">
+            <span class="skill-tag">ES6+</span>
+            <span class="skill-tag">DOM</span>
+            <span class="skill-tag">API</span>
+            <span class="skill-tag">Validación</span>
+          </div>
         </div>
+        
         <!-- Java -->
-        <div class="skill-item">
-          <h3>Java</h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 70%;"></div>
+        <div class="skill-card" data-category="backend">
+          <div class="skill-header">
+            <div class="skill-icon">
+              <i class="fab fa-java"></i>
+            </div>
+            <div>
+              <h3 class="skill-title">Java</h3>
+              <span class="skill-level-text">Intermedio</span>
+            </div>
           </div>
-          <p>Aplicaciones de escritorio con Swing, manejo de ficheros y bases de datos locales (JDBC/SQLite).</p>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="java-bar">
+              <span class="skill-percent">70%</span>
+            </div>
+          </div>
+          
+          <p class="skill-description">Aplicaciones de escritorio con Swing, manejo de ficheros y bases de datos locales (JDBC/SQLite).</p>
+          
+          <div class="skill-tags">
+            <span class="skill-tag">Swing</span>
+            <span class="skill-tag">JDBC</span>
+            <span class="skill-tag">Aplicaciones Desktop</span>
+          </div>
         </div>
+        
         <!-- PHP -->
-        <div class="skill-item">
-          <h3>PHP</h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 60%;"></div>
+        <div class="skill-card" data-category="backend">
+          <div class="skill-header">
+            <div class="skill-icon">
+              <i class="fab fa-php"></i>
+            </div>
+            <div>
+              <h3 class="skill-title">PHP</h3>
+              <span class="skill-level-text">Intermedio</span>
+            </div>
           </div>
-          <p>Desarrollo back-end básico, validación de formularios y sesiones.</p>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="php-bar">
+              <span class="skill-percent">60%</span>
+            </div>
+          </div>
+          
+          <p class="skill-description">Desarrollo back-end básico, validación de formularios y manejo de sesiones.</p>
+          
+          <div class="skill-tags">
+            <span class="skill-tag">Backend</span>
+            <span class="skill-tag">Formularios</span>
+            <span class="skill-tag">Sesiones</span>
+          </div>
         </div>
+        
         <!-- MySQL -->
-        <div class="skill-item">
-          <h3>MySQL</h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 65%;"></div>
+        <div class="skill-card" data-category="database">
+          <div class="skill-header">
+            <div class="skill-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <div>
+              <h3 class="skill-title">MySQL</h3>
+              <span class="skill-level-text">Intermedio</span>
+            </div>
           </div>
-          <p>Diseño de esquemas, consultas complejas, índices y relaciones.</p>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="mysql-bar">
+              <span class="skill-percent">65%</span>
+            </div>
+          </div>
+          
+          <p class="skill-description">Diseño de esquemas, consultas complejas, índices y relaciones entre tablas.</p>
+          
+          <div class="skill-tags">
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Esquemas</span>
+            <span class="skill-tag">Consultas</span>
+            <span class="skill-tag">Relaciones</span>
+          </div>
         </div>
+        
         <!-- Git -->
-        <div class="skill-item">
-          <h3>Git & GitHub</h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 70%;"></div>
+        <div class="skill-card" data-category="tools">
+          <div class="skill-header">
+            <div class="skill-icon">
+              <i class="fab fa-git-alt"></i>
+            </div>
+            <div>
+              <h3 class="skill-title">Git & GitHub</h3>
+              <span class="skill-level-text">Intermedio</span>
+            </div>
           </div>
-          <p>Control de versiones, ramas, pull requests y colaboración en equipo.</p>
-        </div>
-        <!-- Herramientas Extra -->
-        <div class="skill-item">
-          <h3>Visual Studio Code</h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 85%;"></div>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="git-bar">
+              <span class="skill-percent">70%</span>
+            </div>
           </div>
-          <p>Configuración de extensiones, depuración de código y atajos productivos.</p>
-        </div>
-        <div class="skill-item">
-          <h3>Figma (Básico)</h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 50%;"></div>
+          
+          <p class="skill-description">Control de versiones, manejo de ramas, pull requests y colaboración en equipo.</p>
+          
+          <div class="skill-tags">
+            <span class="skill-tag">Control de Versiones</span>
+            <span class="skill-tag">Colaboración</span>
+            <span class="skill-tag">GitHub</span>
           </div>
-          <p>Creación de wireframes y prototipos sencillos para planificar diseños.</p>
         </div>
+        
+        <!-- Visual Studio Code -->
+        <div class="skill-card" data-category="tools">
+          <div class="skill-header">
+            <div class="skill-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <div>
+              <h3 class="skill-title">Visual Studio Code</h3>
+              <span class="skill-level-text">Avanzado</span>
+            </div>
+          </div>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="vscode-bar">
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+          
+          <p class="skill-description">Configuración de extensiones, depuración de código y uso de atajos para mayor productividad.</p>
+          
+          <div class="skill-tags">
+            <span class="skill-tag">Editor</span>
+            <span class="skill-tag">Extensiones</span>
+            <span class="skill-tag">Depuración</span>
+          </div>
+        </div>
+        
+        <!-- Figma -->
+        <div class="skill-card" data-category="tools">
+          <div class="skill-header">
+            <div class="skill-icon">
+              <i class="fab fa-figma"></i>
+            </div>
+            <div>
+              <h3 class="skill-title">Figma</h3>
+              <span class="skill-level-text">Básico</span>
+            </div>
+          </div>
+          
+          <div class="skill-bar-container">
+            <div class="skill-bar" id="figma-bar">
+              <span class="skill-percent">50%</span>
+            </div>
+          </div>
+          
+          <p class="skill-description">Creación de wireframes y prototipos sencillos para planificar diseños web.</p>
+          
+          <div class="skill-tags">
+            <span class="skill-tag">Diseño</span>
+            <span class="skill-tag">Wireframes</span>
+            <span class="skill-tag">Prototipos</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="skills-more">
+        <p class="section-subtitle">Actualmente aprendiendo: <strong>React.js, Node.js, MongoDB</strong></p>
       </div>
     </div>
   </section>
@@ -127,11 +318,153 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Ismael Achamrouk. Todos los derechos reservados.</p>
+      <div class="footer-content">
+        <div class="footer-col">
+          <div class="logo">Ismael Achamrouk</div>
+          <p class="footer-description">Desarrollador web apasionado por crear soluciones innovadoras y funcionales.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4 class="footer-title">Enlaces rápidos</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Sobre mí</a></li>
+            <li><a href="projects.html">Proyectos</a></li>
+            <li><a href="skills.html">Habilidades</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4 class="footer-title">Contacto</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-envelope"></i> contacto@ismaelachamrouk.com</li>
+            <li><i class="fas fa-phone"></i> +34 600 000 000</li>
+            <li><i class="fas fa-map-marker-alt"></i> Barcelona, España</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ismael Achamrouk. Todos los derechos reservados.</p>
+        <div class="footer-links">
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Términos de Uso</a>
+        </div>
+      </div>
     </div>
   </footer>
 
   <!-- JavaScript -->
-  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // === Menú móvil ===
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      
+      navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+      });
+      
+      // Cerrar menú al hacer clic en un enlace
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+          navToggle.classList.remove('active');
+        });
+      });
+      
+      // === Cambio de tema ===
+      const toggleSwitch = document.getElementById('theme-toggle');
+      
+      // Aplicar tema guardado al cargar
+      function loadTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+          document.body.classList.add('dark-mode');
+          toggleSwitch.checked = true;
+        }
+      }
+      
+      // Cambiar tema
+      function switchTheme(e) {
+        if (e.target.checked) {
+          document.body.classList.add('dark-mode');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.body.classList.remove('dark-mode');
+          localStorage.setItem('theme', 'light');
+        }
+      }
+      
+      toggleSwitch.addEventListener('change', switchTheme);
+      loadTheme();
+      
+      // === Animación de barras de habilidades ===
+      const skillBars = [
+        { id: 'html-bar', width: '90%' },
+        { id: 'css-bar', width: '85%' },
+        { id: 'js-bar', width: '80%' },
+        { id: 'java-bar', width: '70%' },
+        { id: 'php-bar', width: '60%' },
+        { id: 'mysql-bar', width: '65%' },
+        { id: 'git-bar', width: '70%' },
+        { id: 'vscode-bar', width: '85%' },
+        { id: 'figma-bar', width: '50%' }
+      ];
+      
+      function animateSkillBars() {
+        skillBars.forEach(bar => {
+          const element = document.getElementById(bar.id);
+          element.style.width = bar.width;
+        });
+      }
+      
+      // Iniciar animación cuando la sección sea visible
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateSkillBars();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      
+      observer.observe(document.getElementById('skills-section'));
+      
+      // === Filtrado de habilidades por categoría ===
+      const categoryButtons = document.querySelectorAll('.category-btn');
+      const skillCards = document.querySelectorAll('.skill-card');
+      
+      categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Quitar clase active de todos los botones
+          categoryButtons.forEach(btn => btn.classList.remove('active'));
+          
+          // Agregar clase active al botón clickeado
+          button.classList.add('active');
+          
+          const category = button.dataset.category;
+          
+          // Mostrar/ocultar habilidades según categoría
+          skillCards.forEach(card => {
+            if (category === 'all' || card.dataset.category === category) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
