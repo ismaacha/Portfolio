@@ -205,6 +205,7 @@ body {
       display: flex;
       align-items: center;
       gap: 0.3rem;
+      text-decoration: none;
     }
 
     .nav-link::after {
@@ -600,12 +601,13 @@ body {
   box-shadow: 0 5px 15px var(--card-shadow);
   transition: var(--transition);
   text-align: center;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color);    
+  text-decoration: none;
 }
 
 .tile-card:hover {
   transform: translateY(-10px);
-  box-shadow: 15px 15px 30px rgba(38, 0, 226, 0.97);
+  box-shadow: 15px 15px 30px rgba(12, 99, 187, 0.97);
   border-color: var(--primary);
 }
 
