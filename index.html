@@ -1,244 +1,843 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ismael Achamrouk | Desarrollador Web</title>
-  <link rel="icon" href="imagenes/Logo.png" type="image/png" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <!-- CSS General -->
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <!-- Header / Navbar -->
-  <header class="header" id="header">
-    <div class="container">
-      <div class="logo">IA</div>
-      <nav class="nav" id="nav-menu">
-        <ul class="nav-list">
-          <li><a href="#home" class="nav-link active">Inicio</a></li>
-          <li><a href="#about" class="nav-link">Sobre mí</a></li>
-          <li><a href="#about" class="nav-link">Habilidades</a></li>
-          <li><a href="#projects" class="nav-link">Proyectos</a></li>
-          <li><a href="#about" class="nav-link">Experiencia</a></li>
-          <li class="dropdown">
-            <a href="#" class="nav-link">Más <i class="fas fa-chevron-down"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="education.html" class="nav-link">Educación</a></li>
-              <li><a href="languages.html" class="nav-link">Idiomas</a></li>
-              <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
-              <li><a href="contact.html" class="nav-link">Contacto</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
 
-      <div class="header-actions">
-        <div class="theme-switch-wrapper">
-          <label class="theme-switch" for="theme-toggle">
-            <input type="checkbox" id="theme-toggle" />
-            <span class="slider"></span>
-          </label>
-        </div>
-        
-        <div class="nav-toggle" id="nav-toggle">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Ismael Achamrouk - Desarrollador Web Full Stack especializado en crear experiencias digitales modernas e innovadoras">
+  <title>Ismael Achamrouk | Desarrollador Web Full Stack</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="imagenes/Logo.png" type="image/png">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-text">isma_acha</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="#home" class="nav-link active">Inicio</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">Sobre mí</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link">Habilidades</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Proyectos</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link">Experiencia</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
-  </header>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
-    <div class="container">
+    <div class="hero-background">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <div class="container hero-container">
       <div class="hero-content">
-        <div class="hero-text">
-          <h4 class="hero-subtitle">Hola, soy</h4>
-          <h1 class="hero-title">Ismael Achamrouk</h1>
-          <h2 class="hero-tagline">Estudiante de DAW & Apasionado por la Tecnología y Automoción</h2>
-          <p class="hero-description">Desarrollo soluciones web creativas combinando conocimientos técnicos y mi pasión por la innovación. Explora mi trabajo y conoce mi trayectoria.</p>
-          <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary">Ver proyectos</a>
-            <a href="contact.html" class="btn btn-outline">Contactar</a>
-          </div>
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Disponible para proyectos
         </div>
-        <div class="hero-image">
-          <div class="image-wrapper">
-            <div class="image-placeholder"></div>
-            <div class="decoration-circle"></div>
-            <div class="decoration-dots"></div>
+
+        <h1 class="hero-title">
+          Hola, soy <span class="gradient-text">Ismael Achamrouk</span>
+        </h1>
+
+        <h2 class="hero-subtitle">
+          Desarrollador Web Full Stack
+        </h2>
+
+        <p class="hero-description">
+          Transformo ideas en experiencias digitales excepcionales. Especializado en crear aplicaciones web modernas,
+          funcionales y visualmente impactantes que impulsan el éxito empresarial.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">
+            <span>Trabajemos juntos</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#projects" class="btn btn-secondary">
+            <span>Ver proyectos</span>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3 class="stat-number">5+</h3>
+            <p class="stat-label">Proyectos completados</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number">7+</h3>
+            <p class="stat-label">Idiomas</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number">2+</h3>
+            <p class="stat-label">Años de experiencia</p>
           </div>
         </div>
       </div>
-      
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-number">2+</span>
-          <span class="stat-label">Años de experiencia</span>
+
+      <div class="hero-image">
+        <div class="image-wrapper">
+          <div class="floating-card card-1">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="floating-card card-2">
+            <i class="fab fa-js"></i>
+          </div>
+          <div class="floating-card card-3">
+            <i class="fab fa-react"></i>
+          </div>
+          <div class="floating-card card-4">
+            <i class="fab fa-node"></i>
+          </div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">15+</span>
-          <span class="stat-label">Proyectos completados</span>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <p>Scroll para explorar</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Conóceme</span>
+        <h2 class="section-title">Sobre mí</h2>
+        <p class="section-description">
+          Mi historia, formación y lo que me motiva cada día
+        </p>
+      </div>
+
+      <div class="about-content">
+        <div class="about-image-container">
+          <div class="about-image">
+            <div class="image-placeholder">
+              <i class="fas fa-user"></i>
+            </div>
+          </div>
+          <div class="about-decoration">
+            <div class="decoration-item">
+              <i class="fas fa-code"></i>
+              <span>Clean Code</span>
+            </div>
+            <div class="decoration-item">
+              <i class="fas fa-rocket"></i>
+              <span>Fast Performance</span>
+            </div>
+          </div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">4</span>
-          <span class="stat-label">Idiomas</span>
+
+        <div class="about-text">
+          <p class="lead">
+            ¡Hola! Soy <strong>Ismael Achamrouk</strong>, un joven de 18 años apasionado por el mundo de la
+            programación y la tecnología.
+          </p>
+
+          <p>
+            Actualmente estudio el <strong>Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web
+              (DAW)</strong>,
+            donde he aprendido y sigo ampliando mis conocimientos en <strong>HTML5, CSS3, JavaScript, Java, PHP y
+              MySQL</strong>.
+          </p>
+
+          <p>
+            Me considero una persona proactiva, con una gran motivación por resolver problemas, aportar ideas frescas y
+            trabajar en equipo. He realizado prácticas en <em>Piscinas Vilaseca</em>, donde administré la base de datos
+            durante <strong>4-5 meses</strong>, optimizando la gestión de inventarios y clientes mediante consultas SQL
+            eficientes.
+          </p>
+
+          <p>
+            Mi objetivo a medio plazo es especializarme en <strong>desarrollo front-end con React</strong> y
+            <strong>Node.js</strong>,
+            así como profundizar en <strong>DevOps y despliegues en la nube</strong>.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Aprendizaje continuo</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Trabajo en equipo</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Resolución de problemas</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Atención al detalle</span>
+            </div>
+          </div>
+
+          <div class="about-actions">
+            <a href="#contact" class="btn btn-primary">
+              <span>Contactar</span>
+              <i class="fas fa-paper-plane"></i>
+            </a>
+            <a href="downloads/CV_Ismael_Achamrouk.pdf" download class="btn btn-outline">
+              <i class="fas fa-download"></i>
+              <span>Descargar CV</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Projects -->
-  <section class="section featured-projects" id="projects">
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Proyectos Destacados</h2>
-        <p class="section-subtitle">Una selección de mis mejores trabajos</p>
+        <span class="section-tag">Tecnologías</span>
+        <h2 class="section-title">Habilidades Técnicas</h2>
+        <p class="section-description">
+          Herramientas y tecnologías que domino para crear soluciones digitales
+        </p>
       </div>
-      
-      <div class="projects-grid">
-        
-        <!-- Proyect 1-->
-        <div class="project-card">
-          <div class="project-image">
-            <div class="image-placeholder"></div>
+
+      <div class="skills-filter">
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="database">Bases de Datos</button>
+        <button class="filter-btn" data-filter="tools">Herramientas</button>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Frontend Skills -->
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-icon">
+            <i class="fab fa-html5"></i>
           </div>
-          <div class="project-content">
-            <span class="project-category">Aplicación Web</span>
-            <h3 class="project-title">Sistema de Gestión de Piscinas</h3>
-            <p class="project-description">Aplicación desarrollada durante mis prácticas en Piscinas Vilaseca, permite gestionar clientes, citas y mantenimiento.</p>
-            <div class="project-tech">
-              <span>Java</span>
-              <span>Spring Boot</span>
-              <span>MySQL</span>
+          <h3 class="skill-name">HTML5</h3>
+          <div class="skill-level">
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="90"></div>
             </div>
-            <div class="project-links">
-              <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i> Demo</a>
-              <a href="#" class="link-icon"><i class="fab fa-github"></i> Código</a>
-            </div>
+            <span class="skill-percentage">90%</span>
           </div>
-        </div>
-        
-        <!-- Proyect 2-->
-        <div class="project-card">
-          <div class="project-image">
-            <div class="image-placeholder"></div>
-          </div>
-          <div class="project-content">
-            <span class="project-category">E-commerce</span>
-            <h3 class="project-title">Tienda Online de Repuestos</h3>
-            <p class="project-description">Plataforma de comercio electrónico especializada en repuestos automotrices con sistema de inventario y pedidos.</p>
-            <div class="project-tech">
-              <span>JavaScript</span>
-              <span>React</span>
-              <span>Node.js</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i> Demo</a>
-              <a href="#" class="link-icon"><i class="fab fa-github"></i> Código</a>
-            </div>
-          </div>
+          <p class="skill-description">Semántica, SEO y accesibilidad</p>
         </div>
 
-        <!-- Proyect 3-->
-        <div class="project-card">
-          <div class="project-image">
-            <div class="image-placeholder"></div>
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-icon">
+            <i class="fab fa-css3-alt"></i>
           </div>
-          <div class="project-content">
-            <span class="project-category">Aplicación Móvil</span>
-            <h3 class="project-title">App de Gestión de Tareas</h3>
-            <p class="project-description">Aplicación móvil para gestionar tareas diarias, con recordatorios y sincronización en la nube.</p>
-            <div class="project-tech">
-              <span>Flutter</span>
-              <span>Dart</span>
-              <span>Firebase</span>
+          <h3 class="skill-name">CSS3</h3>
+          <div class="skill-level">
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="85"></div>
             </div>
-            <div class="project-links">
-              <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i> Demo</a>
-              <a href="#" class="link-icon"><i class="fab fa-github"></i> Código</a>
-            </div>
+            <span class="skill-percentage">85%</span>
           </div>
-          </div>
-      </div>
-      
-      <div class="section-footer">
-        <a href="projects.html" class="btn btn-outline">Ver todos los proyectos <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </section>
+          <p class="skill-description">Flexbox, Grid, Animaciones</p>
+        </div>
 
-  <!-- Tiles Section -->
-  <section class="section tiles-section" id="tiles">
-    <div class="container">
-      <div class="section-header">
-        <h2 id="skills" class="section-title">Explora mi Portfolio</h2>
-        <p class="section-subtitle">Conoce más sobre mi trayectoria y habilidades</p>
-      </div>
-      
-      <div class="tiles-grid">
-        <a id="about" href="about.html" class="tile-card">
-          <div class="tile-icon">
-            <i class="fas fa-user"></i>
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-icon">
+            <i class="fab fa-js"></i>
           </div>
-          <h3 class="section-title">Sobre mí</h3>
-          <strong><p>Mi historia, formación y lo que me motiva.</p></strong>
-          <span class="tile-link">Ver más <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="skills.html" class="tile-card">
-          <div class="tile-icon">
+          <h3 class="skill-name">JavaScript</h3>
+          <div class="skill-level">
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="80"></div>
+            </div>
+            <span class="skill-percentage">80%</span>
+          </div>
+          <p class="skill-description">ES6+, DOM, Fetch API</p>
+        </div>
+
+        <!-- Backend Skills -->
+        <div class="skill-card" data-category="backend">
+          <div class="skill-icon">
+            <i class="fab fa-java"></i>
+          </div>
+          <h3 class="skill-name">Java</h3>
+          <div class="skill-level">
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="70"></div>
+            </div>
+            <span class="skill-percentage">70%</span>
+          </div>
+          <p class="skill-description">Swing, JDBC, Aplicaciones Desktop</p>
+        </div>
+
+        <div class="skill-card" data-category="backend">
+          <div class="skill-icon">
+            <i class="fab fa-php"></i>
+          </div>
+          <h3 class="skill-name">PHP</h3>
+          <div class="skill-level">
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="60"></div>
+            </div>
+            <span class="skill-percentage">60%</span>
+          </div>
+          <p class="skill-description">Backend, Formularios, Sesiones</p>
+        </div>
+
+        <!-- Database Skills -->
+        <div class="skill-card" data-category="database">
+          <div class="skill-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3 class="skill-name">MySQL</h3>
+          <div class="skill-level">
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="65"></div>
+            </div>
+            <span class="skill-percentage">65%</span>
+          </div>
+          <p class="skill-description">Consultas, Esquemas, Relaciones</p>
+        </div>
+
+        <div class="skill-card" data-category="database">
+          <div class="skill-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3 class="skill-name">MongoDB</h3>
+          <div class="skill-level">
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="50"></div>
+            </div>
+            <span class="skill-percentage">50%</span>
+          </div>
+          <p class="skill-description">NoSQL, Documentos, Consultas</p>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-card" data-category="tools">
+          <div class="skill-icon">
+            <i class="fab fa-git-alt"></i>
+          </div>
+          <h3 class="skill-name">Git & GitHub</h3>
+          <div class="skill-level">
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="70"></div>
+            </div>
+            <span class="skill-percentage">70%</span>
+          </div>
+          <p class="skill-description">Control de versiones, Colaboración</p>
+        </div>
+
+        <div class="skill-card" data-category="tools">
+          <div class="skill-icon">
             <i class="fas fa-code"></i>
           </div>
-          <h3 class="section-title">Habilidades</h3>
-          <p>Lenguajes, frameworks y herramientas que manejo.</p>
-          <span class="tile-link">Ver más <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="experience.html" class="tile-card">
-          <div class="tile-icon">
-            <i class="fas fa-briefcase"></i>
+          <h3 class="skill-name">VS Code</h3>
+          <div class="skill-level">
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="85"></div>
+            </div>
+            <span class="skill-percentage">85%</span>
           </div>
-          <h3 class="section-title">Experiencia</h3>
-          <p>Prácticas en Piscinas Vilaseca y roles destacados.</p>
-          <span class="tile-link">Ver más <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="education.html" class="tile-card">
-          <div class="tile-icon">
+          <p class="skill-description">Extensiones, Depuración</p>
+        </div>
+
+        <div class="skill-card" data-category="tools">
+          <div class="skill-icon">
+            <i class="fab fa-figma"></i>
+          </div>
+          <h3 class="skill-name">Figma</h3>
+          <div class="skill-level">
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="50"></div>
+            </div>
+            <span class="skill-percentage">50%</span>
+          </div>
+          <p class="skill-description">Wireframes, Prototipos</p>
+        </div>
+      </div>
+
+      <div class="skills-learning">
+        <h3>Actualmente aprendiendo</h3>
+        <div class="learning-tags">
+          <span class="learning-tag">
+            <i class="fab fa-react"></i>
+            React.js
+          </span>
+          <span class="learning-tag">
+            <i class="fab fa-node"></i>
+            Node.js
+          </span>
+          <span class="learning-tag">
+            <i class="fas fa-cloud"></i>
+            DevOps
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Proyectos Destacados</h2>
+        <p class="section-description">
+          Una selección de mis trabajos más recientes y relevantes
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-gradient gradient-1"></div>
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">Portfolio Personal</h3>
+              <span class="project-category">Web Personal</span>
+            </div>
+            <p class="project-description">
+              Mi espacio personal en la web. Un diseño moderno y minimalista enfocado en la
+              experiencia de usuario y la presentación de proyectos.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ismaacha" class="project-btn" target="_blank">
+                <i class="fab fa-github"></i>
+                Código
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-gradient gradient-2"></div>
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">App de Gestión Hotelera</h3>
+              <span class="project-category">Gestión / Backend</span>
+            </div>
+            <p class="project-description">
+              Sistema robusto para la gestión integral de un hotel. Manejo de reservas,
+              habitaciones, clientes y facturación.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Spring Boot</span>
+              <span class="tech-tag">MySQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn">
+                <i class="fab fa-github"></i>
+                Código
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-gradient gradient-3"></div>
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">Restaurante Nor</h3>
+              <span class="project-category">Web Corporativa</span>
+            </div>
+            <p class="project-description">
+              Sitio web elegante para un restaurante de alta cocina. Menú interactivo,
+              galería de platos y sistema de contacto.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn">
+                <i class="fas fa-external-link-alt"></i>
+                Visitar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-gradient gradient-4"></div>
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">AVI - Compraventa de Vehículos</h3>
+              <span class="project-category">Marketplace</span>
+            </div>
+            <p class="project-description">
+              Plataforma dinámica para la compra y venta de vehículos. Incluye filtrado
+              avanzado, perfiles de usuario y gestión de anuncios.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn">
+                <i class="fab fa-github"></i>
+                Código
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-gradient gradient-5"></div>
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">Epic-Customs</h3>
+              <span class="project-category">Landing Page</span>
+            </div>
+            <p class="project-description">
+              Web estática desarrollada como proyecto académico. Diseño limpio y directo
+              enfocado en la personalización de productos.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn">
+                <i class="fab fa-github"></i>
+                Código
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Trayectoria</span>
+        <h2 class="section-title">Experiencia Profesional</h2>
+        <p class="section-description">
+          Mi recorrido profesional y las experiencias que me han formado
+        </p>
+      </div>
+
+      <div class="timeline">
+        <!-- Experience 1 -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Prácticas – Piscinas Vilaseca</h3>
+              <span class="timeline-date">
+                <i class="fas fa-calendar"></i>
+                Octubre 2023 – Febrero 2024
+              </span>
+            </div>
+            <p class="timeline-description">
+              Participé en la administración de la base de datos de clientes e inventario.
+            </p>
+            <ul class="timeline-list">
+              <li>Diseño y optimización de consultas SQL para la generación de reportes mensuales</li>
+              <li>Actualización y mantenimiento de registros de stock (piezas, productos químicos, mobiliario)</li>
+              <li>Implementación de backups automáticos y verificación de integridad de datos</li>
+              <li>Interacción con el equipo comercial para ajustar precios e inventarios en tiempo real</li>
+            </ul>
+            <div class="timeline-achievement">
+              <i class="fas fa-trophy"></i>
+              Reducción del 20% en tiempo de acceso a informes
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Práctica Front-End – Agencia Digital XYZ</h3>
+              <span class="timeline-date">
+                <i class="fas fa-calendar"></i>
+                Marzo 2024 – Julio 2024
+              </span>
+            </div>
+            <p class="timeline-description">
+              Realicé prácticas en una agencia digital donde colaboré en varios proyectos de clientes.
+            </p>
+            <ul class="timeline-list">
+              <li>Desarrollo de componentes interactivos con JavaScript (sliders, modales y menús dinámicos)</li>
+              <li>Implementación de diseños responsivos usando CSS Grid y Flexbox</li>
+              <li>Trabajo colaborativo con diseñadores UI/UX para llevar wireframes a prototipos funcionales</li>
+              <li>Optimización de páginas para mejorar el performance (minificación de CSS/JS y carga diferida)</li>
+            </ul>
+            <div class="timeline-achievement">
+              <i class="fas fa-trophy"></i>
+              Mejora del 30% en velocidad de carga
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Voluntariado – Talleres para Jóvenes Programadores</h3>
+              <span class="timeline-date">
+                <i class="fas fa-calendar"></i>
+                Septiembre 2023 – Presente
+              </span>
+            </div>
+            <p class="timeline-description">
+              Colaboro como mentor en talleres locales para jóvenes interesados en programación.
+            </p>
+            <ul class="timeline-list">
+              <li>Imparto clases básicas de HTML y CSS a grupos de 10-15 alumnos</li>
+              <li>Organizo desafíos de mini-hackathons con premios simbólicos</li>
+              <li>Asisto en la corrección de proyectos finales y doy feedback en cada entrega</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education & Languages -->
+      <div class="additional-info">
+        <div class="info-card">
+          <div class="info-header">
             <i class="fas fa-graduation-cap"></i>
+            <h3>Formación Académica</h3>
           </div>
-          <h3 class="section-title">Educación</h3>
-          <p>Trayectoria académica y próximos cursos planificados.</p>
-          <span class="tile-link">Ver más <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="languages.html" class="tile-card">
-          <div class="tile-icon">
+          <div class="info-item">
+            <h4>Desarrollo de Aplicaciones Web (DAW)</h4>
+            <span class="info-date">Septiembre 2022 – Presente</span>
+            <p>Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web</p>
+          </div>
+          <div class="info-item">
+            <h4>Bachillerato en Ciencias Sociales</h4>
+            <span class="info-date">Septiembre 2020 – Junio 2022</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-header">
             <i class="fas fa-language"></i>
+            <h3>Idiomas</h3>
           </div>
-          <h3 class="section-title">Idiomas</h3>
-          <p>Inglés, Francés y Árabe, con certificaciones oficiales.</p>
-          <span class="tile-link">Ver más <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="hobbies.html" class="tile-card">
-          <div class="tile-icon">
-            <i class="fas fa-heart"></i>
+          <div class="language-grid">
+            <div class="language-item">
+              <span class="language-name">Español</span>
+              <span class="language-level">Nativo</span>
+            </div>
+            <div class="language-item">
+              <span class="language-name">Catalán</span>
+              <span class="language-level">Nativo</span>
+            </div>
+            <div class="language-item">
+              <span class="language-name">Inglés</span>
+              <span class="language-level">B2 / Pre C1</span>
+            </div>
+            <div class="language-item">
+              <span class="language-name">Árabe</span>
+              <span class="language-level">Intermedio</span>
+            </div>
+            <div class="language-item">
+              <span class="language-name">Amazigh</span>
+              <span class="language-level">Nativo</span>
+            </div>
+            <div class="language-item">
+              <span class="language-name">Francés</span>
+              <span class="language-level">Básico</span>
+            </div>
+            <div class="language-item">
+              <span class="language-name">Alemán</span>
+              <span class="language-level">Básico</span>
+            </div>
           </div>
-          <h3 class="section-title">Hobbies</h3>
-          <p>Pasiones como la mecánica, el deporte y la música.</p>
-          <span class="tile-link">Ver más <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="contact.html" class="tile-card">
-          <div class="tile-icon">
-            <i class="fas fa-envelope"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Hablemos</span>
+        <h2 class="section-title">Contacto</h2>
+        <p class="section-description">
+          ¿Tienes un proyecto en mente? Trabajemos juntos
+        </p>
+      </div>
+
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Información de Contacto</h3>
+          <p class="contact-intro">
+            Estoy disponible para proyectos freelance, colaboraciones o simplemente para charlar sobre tecnología.
+          </p>
+
+          <div class="contact-methods">
+            <a href="mailto:contacto@ismaelachamrouk.com" class="contact-method">
+              <div class="method-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="method-info">
+                <span class="method-label">Email</span>
+                <span class="method-value">contacto@ismaelachamrouk.com</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/ismaacha" target="_blank" class="contact-method">
+              <div class="method-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="method-info">
+                <span class="method-label">GitHub</span>
+                <span class="method-value">github.com/ismaacha</span>
+              </div>
+            </a>
+
+            <a href="https://linkedin.com/in/ismaelachamrouk" target="_blank" class="contact-method">
+              <div class="method-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="method-info">
+                <span class="method-label">LinkedIn</span>
+                <span class="method-value">linkedin.com/in/ismaelachamrouk</span>
+              </div>
+            </a>
+
+            <div class="contact-method">
+              <div class="method-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="method-info">
+                <span class="method-label">Ubicación</span>
+                <span class="method-value">Tarragona, España</span>
+              </div>
+            </div>
           </div>
-          <h3 class="section-title">Contacto</h3>
-          <p>¿Tienes alguna pregunta o propuesta? ¡Hablemos!</p>
-          <span class="tile-link">Ver más <i class="fas fa-arrow-right"></i></span>
-        </a>
+
+          <div class="social-links">
+            <a href="https://github.com/ismaacha" target="_blank" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Asunto</label>
+            <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..."
+              required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            <span>Enviar Mensaje</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
       </div>
     </div>
   </section>
@@ -247,49 +846,57 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-col">
-          <div class="logo">Ismael Achamrouk</div>
-          <p class="footer-description">Desarrollador web apasionado por crear soluciones innovadoras y funcionales.</p>
-          <div class="social-links">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/ismaacha" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          </div>
+        <div class="footer-brand">
+          <h3 class="footer-logo">Ismael Achamrouk</h3>
+          <p class="footer-description">
+            Desarrollador Web Full Stack apasionado por crear experiencias digitales excepcionales.
+          </p>
         </div>
-        
-        <div class="footer-col">
-          <h4 class="footer-title">Enlaces rápidos</h4>
-          <ul class="footer-links">
+
+        <div class="footer-links">
+          <h4>Enlaces Rápidos</h4>
+          <ul>
             <li><a href="#home">Inicio</a></li>
             <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#skills">Habilidades</a></li>
             <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#experience">Experiencia</a></li>
-            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul>
         </div>
-        
-        <div class="footer-col">
-          <h4 class="footer-title">Contacto</h4>
-          <ul class="footer-contact">
-            <li><i class="fas fa-envelope"></i> contacto@ismaelachamrouk.com</li>
-            <li><i class="fas fa-phone"></i> +34 600 000 000</li>
-            <li><i class="fas fa-map-marker-alt"></i> Tarragona, España</li>
+
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <ul>
+            <li>
+              <i class="fas fa-envelope"></i>
+              contacto@ismaelachamrouk.com
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              Tarragona, España
+            </li>
           </ul>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <p>&copy; 2025 Ismael Achamrouk. Todos los derechos reservados.</p>
-        <div class="footer-links">
-          <a href="#">Política de Privacidad</a>
-          <a href="#">Términos de Uso</a>
+        <div class="footer-social">
+          <a href="https://github.com/ismaacha" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Custom JavaScript -->
   <script src="js/script.js"></script>
 </body>
+
 </html>
