@@ -5,18 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Ismael Achamrouk - Desarrollador Web Full Stack especializado en crear experiencias digitales modernas e innovadoras">
-  <title>Ismael Achamrouk | Desarrollador Web Full Stack</title>
+    content="Ismael Achamrouk — Desarrollador Web Full Stack. Creando experiencias digitales modernas con pasión por el código limpio y el diseño cuidado.">
+  <title>Ismael Achamrouk | Dev Full Stack</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
@@ -25,30 +25,46 @@
 </head>
 
 <body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Page Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-text">isma_acha</span>
+      <div class="loader-bar">
+        <div class="loader-fill"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#home" class="nav-logo">
-        <span class="logo-text">isma_acha</span>
+        <span class="logo-bracket">&lt;</span>isma_acha<span class="logo-bracket">/&gt;</span>
       </a>
 
       <ul class="nav-menu" id="nav-menu">
-        <li class="nav-item"><a href="#home" class="nav-link active">Inicio</a></li>
-        <li class="nav-item"><a href="#about" class="nav-link">Sobre mí</a></li>
-        <li class="nav-item"><a href="#skills" class="nav-link">Habilidades</a></li>
-        <li class="nav-item"><a href="#projects" class="nav-link">Proyectos</a></li>
-        <li class="nav-item"><a href="#experience" class="nav-link">Experiencia</a></li>
-        <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
+        <li><a href="#home" class="nav-link active">Inicio</a></li>
+        <li><a href="#about" class="nav-link">Sobre mí</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Proyectos</a></li>
+        <li><a href="#experience" class="nav-link">Experiencia</a></li>
+        <li><a href="#contact" class="nav-link">Contacto</a></li>
       </ul>
 
       <div class="nav-actions">
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
           <i class="fas fa-moon"></i>
         </button>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
+        <a href="downloads/CV_Ismael_Achamrouk.pdf" download class="btn-cv">
+          <i class="fas fa-download"></i> CV
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
@@ -56,168 +72,151 @@
 
   <!-- Hero Section -->
   <section class="hero" id="home">
-    <div class="hero-background">
-      <div class="gradient-orb orb-1"></div>
-      <div class="gradient-orb orb-2"></div>
-      <div class="gradient-orb orb-3"></div>
-    </div>
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="hero-bg-grid"></div>
 
     <div class="container hero-container">
-      <div class="hero-content">
+      <div class="hero-content" data-aos>
         <div class="hero-badge">
-          <span class="badge-dot"></span>
+          <span class="live-dot"></span>
           Disponible para proyectos
         </div>
 
         <h1 class="hero-title">
-          Hola, soy <span class="gradient-text">Ismael Achamrouk</span>
+          Hola, soy<br>
+          <span class="gradient-text typed-text" id="typed-text"></span>
         </h1>
 
-        <h2 class="hero-subtitle">
-          Desarrollador Web Full Stack
-        </h2>
+        <p class="hero-subtitle typewriter-subtitle">Desarrollador Web Full Stack</p>
 
         <p class="hero-description">
-          Transformo ideas en experiencias digitales excepcionales. Especializado en crear aplicaciones web modernas,
-          funcionales y visualmente impactantes que impulsan el éxito empresarial.
+          Transformo ideas en experiencias digitales que impactan. Especializado en interfaces modernas, código limpio y
+          soluciones que funcionan de verdad.
         </p>
 
         <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">
-            <span>Trabajemos juntos</span>
+          <a href="#projects" class="btn btn-primary magnetic">
+            <span>Ver proyectos</span>
             <i class="fas fa-arrow-right"></i>
           </a>
-          <a href="#projects" class="btn btn-secondary">
-            <span>Ver proyectos</span>
+          <a href="#contact" class="btn btn-ghost magnetic">
+            <span>Hablemos</span>
           </a>
         </div>
 
         <div class="hero-stats">
           <div class="stat-item">
-            <h3 class="stat-number">5+</h3>
-            <p class="stat-label">Proyectos completados</p>
+            <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+            <p>Proyectos</p>
           </div>
           <div class="stat-item">
-            <h3 class="stat-number">7+</h3>
-            <p class="stat-label">Idiomas</p>
+            <span class="stat-number" data-target="7">0</span><span class="stat-suffix">+</span>
+            <p>Idiomas</p>
           </div>
           <div class="stat-item">
-            <h3 class="stat-number">2+</h3>
-            <p class="stat-label">Años de experiencia</p>
+            <span class="stat-number" data-target="1">0</span><span class="stat-suffix">+</span>
+            <p>Años exp.</p>
           </div>
         </div>
       </div>
 
-      <div class="hero-image">
-        <div class="image-wrapper">
-          <div class="floating-card card-1">
-            <i class="fab fa-html5"></i>
+      <div class="hero-visual" data-aos>
+        <div class="code-window">
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="code-filename">ismael.js</span>
           </div>
-          <div class="floating-card card-2">
-            <i class="fab fa-js"></i>
+          <div class="code-body">
+            <pre><code><span class="c-keyword">const</span> <span class="c-var">developer</span> = {
+  <span class="c-key">name</span>: <span class="c-str">"Ismael Achamrouk"</span>,
+  <span class="c-key">role</span>: <span class="c-str">"Full Stack Dev"</span>,
+  <span class="c-key">location</span>: <span class="c-str">"Tarragona, ES"</span>,
+  <span class="c-key">stack</span>: [<span class="c-str">"HTML"</span>, <span class="c-str">"CSS"</span>,
+           <span class="c-str">"JS"</span>, <span class="c-str">"Java"</span>,
+           <span class="c-str">"PHP"</span>, <span class="c-str">"MySQL"</span>],
+  <span class="c-key">status</span>: <span class="c-str">"open to work 🚀"</span>
+};</code></pre>
           </div>
-          <div class="floating-card card-3">
-            <i class="fab fa-react"></i>
-          </div>
-          <div class="floating-card card-4">
-            <i class="fab fa-node"></i>
+        </div>
+
+        <div class="tech-orbit">
+          <div class="orbit-ring">
+            <div class="orbit-item" style="--i:0"><i class="fab fa-html5"></i></div>
+            <div class="orbit-item" style="--i:1"><i class="fab fa-css3-alt"></i></div>
+            <div class="orbit-item" style="--i:2"><i class="fab fa-js"></i></div>
+            <div class="orbit-item" style="--i:3"><i class="fab fa-java"></i></div>
+            <div class="orbit-item" style="--i:4"><i class="fab fa-php"></i></div>
+            <div class="orbit-item" style="--i:5"><i class="fas fa-database"></i></div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="scroll-indicator">
-      <div class="mouse">
-        <div class="wheel"></div>
-      </div>
-      <p>Scroll para explorar</p>
+    <div class="scroll-cue">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
     </div>
   </section>
 
   <!-- About Section -->
-  <section class="about" id="about">
+  <section class="about section" id="about">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Conóceme</span>
-        <h2 class="section-title">Sobre mí</h2>
-        <p class="section-description">
-          Mi historia, formación y lo que me motiva cada día
-        </p>
+      <div class="section-header" data-aos>
+        <span class="section-label">// sobre_mi</span>
+        <h2 class="section-title">¿Quién soy?</h2>
       </div>
 
-      <div class="about-content">
-        <div class="about-image-container">
-          <div class="about-image">
-            <div class="image-placeholder">
+      <div class="about-grid">
+        <div class="about-photo" data-aos>
+          <div class="photo-frame">
+            <div class="photo-placeholder">
               <i class="fas fa-user"></i>
             </div>
           </div>
-          <div class="about-decoration">
-            <div class="decoration-item">
-              <i class="fas fa-code"></i>
-              <span>Clean Code</span>
-            </div>
-            <div class="decoration-item">
-              <i class="fas fa-rocket"></i>
-              <span>Fast Performance</span>
-            </div>
+          <div class="about-chips">
+            <span class="chip"><i class="fas fa-map-marker-alt"></i> Tarragona</span>
+            <span class="chip"><i class="fas fa-graduation-cap"></i> DAW 2º curso</span>
+            <span class="chip"><i class="fas fa-code"></i> Open to work</span>
           </div>
         </div>
 
-        <div class="about-text">
-          <p class="lead">
-            ¡Hola! Soy <strong>Ismael Achamrouk</strong>, un joven de 18 años apasionado por el mundo de la
-            programación y la tecnología.
+        <div class="about-text" data-aos>
+          <p class="about-lead">
+            Soy <strong>Ismael Achamrouk</strong>, desarrollador web de 18 años con pasión real por la programación.
+            Estudio el <strong>CFGS en Desarrollo de Aplicaciones Web (DAW)</strong> y construyo proyectos que mezclan
+            funcionalidad y diseño cuidado.
           </p>
-
           <p>
-            Actualmente estudio el <strong>Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web
-              (DAW)</strong>,
-            donde he aprendido y sigo ampliando mis conocimientos en <strong>HTML5, CSS3, JavaScript, Java, PHP y
-              MySQL</strong>.
+            He trabajado con bases de datos reales durante mis prácticas en <strong>Piscinas Vilaseca</strong> y sigo
+            aprendiendo cada día. Me interesa el <strong>frontend moderno</strong>, el <strong>backend robusto</strong>
+            y, a futuro, DevOps y la nube.
           </p>
 
-          <p>
-            Me considero una persona proactiva, con una gran motivación por resolver problemas, aportar ideas frescas y
-            trabajar en equipo. He realizado prácticas en <em>Piscinas Vilaseca</em>, donde administré la base de datos
-            durante <strong>4-5 meses</strong>, optimizando la gestión de inventarios y clientes mediante consultas SQL
-            eficientes.
-          </p>
-
-          <p>
-            Mi objetivo a medio plazo es especializarme en <strong>desarrollo front-end con React</strong> y
-            <strong>Node.js</strong>,
-            así como profundizar en <strong>DevOps y despliegues en la nube</strong>.
-          </p>
-
-          <div class="about-highlights">
-            <div class="highlight-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Aprendizaje continuo</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Trabajo en equipo</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Resolución de problemas</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Atención al detalle</span>
-            </div>
+          <div class="about-values">
+            <div class="value"><i class="fas fa-bolt"></i><span>Proactivo</span></div>
+            <div class="value"><i class="fas fa-users"></i><span>Trabajo en equipo</span></div>
+            <div class="value"><i class="fas fa-search"></i><span>Atención al detalle</span></div>
+            <div class="value"><i class="fas fa-book-open"></i><span>Aprendizaje continuo</span></div>
           </div>
 
-          <div class="about-actions">
-            <a href="#contact" class="btn btn-primary">
-              <span>Contactar</span>
-              <i class="fas fa-paper-plane"></i>
-            </a>
-            <a href="downloads/CV_Ismael_Achamrouk.pdf" download class="btn btn-outline">
-              <i class="fas fa-download"></i>
-              <span>Descargar CV</span>
-            </a>
+          <div class="about-edu">
+            <div class="edu-item">
+              <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div>
+                <strong>DAW — Desarrollo de Aplicaciones Web</strong>
+                <span>2023 – Presente</span>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-icon"><i class="fas fa-school"></i></div>
+              <div>
+                <strong>Bachillerato Ciencias Sociales</strong>
+                <span>2020 – 2022</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -225,510 +224,329 @@
   </section>
 
   <!-- Skills Section -->
-  <section class="skills" id="skills">
+  <section class="skills section" id="skills">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Tecnologías</span>
-        <h2 class="section-title">Habilidades Técnicas</h2>
-        <p class="section-description">
-          Herramientas y tecnologías que domino para crear soluciones digitales
-        </p>
+      <div class="section-header" data-aos>
+        <span class="section-label">// habilidades</span>
+        <h2 class="section-title">Stack Tecnológico</h2>
+        <p class="section-sub">Tecnologías con las que construyo cosas</p>
       </div>
 
-      <div class="skills-filter">
-        <button class="filter-btn active" data-filter="all">Todas</button>
-        <button class="filter-btn" data-filter="frontend">Frontend</button>
-        <button class="filter-btn" data-filter="backend">Backend</button>
-        <button class="filter-btn" data-filter="database">Bases de Datos</button>
-        <button class="filter-btn" data-filter="tools">Herramientas</button>
+      <div class="skills-tabs" data-aos>
+        <button class="tab-btn active" data-tab="frontend">Frontend</button>
+        <button class="tab-btn" data-tab="backend">Backend</button>
+        <button class="tab-btn" data-tab="database">Bases de datos</button>
+        <button class="tab-btn" data-tab="tools">Herramientas</button>
       </div>
 
-      <div class="skills-grid">
-        <!-- Frontend Skills -->
-        <div class="skill-card" data-category="frontend">
-          <div class="skill-icon">
-            <i class="fab fa-html5"></i>
-          </div>
-          <h3 class="skill-name">HTML5</h3>
-          <div class="skill-level">
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="90"></div>
+      <div class="skills-content">
+        <!-- Frontend -->
+        <div class="tab-panel active" data-panel="frontend">
+          <div class="skills-grid">
+            <div class="skill-card" data-aos>
+              <div class="skill-icon html"><i class="fab fa-html5"></i></div>
+              <h3>HTML5</h3>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-w="90"></div>
+              </div>
+              <p>Semántica, SEO, accesibilidad</p>
             </div>
-            <span class="skill-percentage">90%</span>
+            <div class="skill-card" data-aos>
+              <div class="skill-icon css"><i class="fab fa-css3-alt"></i></div>
+              <h3>CSS3</h3>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-w="85"></div>
+              </div>
+              <p>Flexbox, Grid, animaciones</p>
+            </div>
+            <div class="skill-card" data-aos>
+              <div class="skill-icon js"><i class="fab fa-js"></i></div>
+              <h3>JavaScript</h3>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-w="78"></div>
+              </div>
+              <p>ES6+, DOM, Fetch API</p>
+            </div>
+            <div class="skill-card" data-aos>
+              <div class="skill-icon react"><i class="fab fa-react"></i></div>
+              <h3>React <span class="learning-badge">Aprendiendo</span></h3>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-w="35"></div>
+              </div>
+              <p>Componentes, hooks</p>
+            </div>
           </div>
-          <p class="skill-description">Semántica, SEO y accesibilidad</p>
         </div>
 
-        <div class="skill-card" data-category="frontend">
-          <div class="skill-icon">
-            <i class="fab fa-css3-alt"></i>
-          </div>
-          <h3 class="skill-name">CSS3</h3>
-          <div class="skill-level">
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="85"></div>
+        <!-- Backend -->
+        <div class="tab-panel" data-panel="backend">
+          <div class="skills-grid">
+            <div class="skill-card" data-aos>
+              <div class="skill-icon java"><i class="fab fa-java"></i></div>
+              <h3>Java</h3>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-w="72"></div>
+              </div>
+              <p>OOP, Spring Boot, JDBC</p>
             </div>
-            <span class="skill-percentage">85%</span>
+            <div class="skill-card" data-aos>
+              <div class="skill-icon php"><i class="fab fa-php"></i></div>
+              <h3>PHP</h3>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-w="62"></div>
+              </div>
+              <p>Backend, sesiones, formularios</p>
+            </div>
+            <div class="skill-card" data-aos>
+              <div class="skill-icon node"><i class="fab fa-node-js"></i></div>
+              <h3>Node.js <span class="learning-badge">Aprendiendo</span></h3>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-w="28"></div>
+              </div>
+              <p>Express, APIs REST</p>
+            </div>
           </div>
-          <p class="skill-description">Flexbox, Grid, Animaciones</p>
         </div>
 
-        <div class="skill-card" data-category="frontend">
-          <div class="skill-icon">
-            <i class="fab fa-js"></i>
-          </div>
-          <h3 class="skill-name">JavaScript</h3>
-          <div class="skill-level">
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="80"></div>
+        <!-- Database -->
+        <div class="tab-panel" data-panel="database">
+          <div class="skills-grid">
+            <div class="skill-card" data-aos>
+              <div class="skill-icon mysql"><i class="fas fa-database"></i></div>
+              <h3>MySQL</h3>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-w="70"></div>
+              </div>
+              <p>Consultas, relaciones, backups</p>
             </div>
-            <span class="skill-percentage">80%</span>
-          </div>
-          <p class="skill-description">ES6+, DOM, Fetch API</p>
-        </div>
-
-        <!-- Backend Skills -->
-        <div class="skill-card" data-category="backend">
-          <div class="skill-icon">
-            <i class="fab fa-java"></i>
-          </div>
-          <h3 class="skill-name">Java</h3>
-          <div class="skill-level">
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="70"></div>
+            <div class="skill-card" data-aos>
+              <div class="skill-icon mongo"><i class="fas fa-leaf"></i></div>
+              <h3>MongoDB</h3>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-w="45"></div>
+              </div>
+              <p>NoSQL, documentos</p>
             </div>
-            <span class="skill-percentage">70%</span>
           </div>
-          <p class="skill-description">Swing, JDBC, Aplicaciones Desktop</p>
-        </div>
-
-        <div class="skill-card" data-category="backend">
-          <div class="skill-icon">
-            <i class="fab fa-php"></i>
-          </div>
-          <h3 class="skill-name">PHP</h3>
-          <div class="skill-level">
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="60"></div>
-            </div>
-            <span class="skill-percentage">60%</span>
-          </div>
-          <p class="skill-description">Backend, Formularios, Sesiones</p>
-        </div>
-
-        <!-- Database Skills -->
-        <div class="skill-card" data-category="database">
-          <div class="skill-icon">
-            <i class="fas fa-database"></i>
-          </div>
-          <h3 class="skill-name">MySQL</h3>
-          <div class="skill-level">
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="65"></div>
-            </div>
-            <span class="skill-percentage">65%</span>
-          </div>
-          <p class="skill-description">Consultas, Esquemas, Relaciones</p>
-        </div>
-
-        <div class="skill-card" data-category="database">
-          <div class="skill-icon">
-            <i class="fas fa-leaf"></i>
-          </div>
-          <h3 class="skill-name">MongoDB</h3>
-          <div class="skill-level">
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="50"></div>
-            </div>
-            <span class="skill-percentage">50%</span>
-          </div>
-          <p class="skill-description">NoSQL, Documentos, Consultas</p>
         </div>
 
         <!-- Tools -->
-        <div class="skill-card" data-category="tools">
-          <div class="skill-icon">
-            <i class="fab fa-git-alt"></i>
-          </div>
-          <h3 class="skill-name">Git & GitHub</h3>
-          <div class="skill-level">
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="70"></div>
+        <div class="tab-panel" data-panel="tools">
+          <div class="skills-grid">
+            <div class="skill-card" data-aos>
+              <div class="skill-icon git"><i class="fab fa-git-alt"></i></div>
+              <h3>Git & GitHub</h3>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-w="72"></div>
+              </div>
+              <p>Control de versiones, ramas</p>
             </div>
-            <span class="skill-percentage">70%</span>
-          </div>
-          <p class="skill-description">Control de versiones, Colaboración</p>
-        </div>
-
-        <div class="skill-card" data-category="tools">
-          <div class="skill-icon">
-            <i class="fas fa-code"></i>
-          </div>
-          <h3 class="skill-name">VS Code</h3>
-          <div class="skill-level">
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="85"></div>
+            <div class="skill-card" data-aos>
+              <div class="skill-icon vscode"><i class="fas fa-code"></i></div>
+              <h3>VS Code</h3>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-w="88"></div>
+              </div>
+              <p>Extensiones, depuración</p>
             </div>
-            <span class="skill-percentage">85%</span>
-          </div>
-          <p class="skill-description">Extensiones, Depuración</p>
-        </div>
-
-        <div class="skill-card" data-category="tools">
-          <div class="skill-icon">
-            <i class="fab fa-figma"></i>
-          </div>
-          <h3 class="skill-name">Figma</h3>
-          <div class="skill-level">
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="50"></div>
+            <div class="skill-card" data-aos>
+              <div class="skill-icon figma"><i class="fab fa-figma"></i></div>
+              <h3>Figma</h3>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-w="50"></div>
+              </div>
+              <p>Wireframes, prototipos</p>
             </div>
-            <span class="skill-percentage">50%</span>
           </div>
-          <p class="skill-description">Wireframes, Prototipos</p>
         </div>
       </div>
 
-      <div class="skills-learning">
-        <h3>Actualmente aprendiendo</h3>
-        <div class="learning-tags">
-          <span class="learning-tag">
-            <i class="fab fa-react"></i>
-            React.js
-          </span>
-          <span class="learning-tag">
-            <i class="fab fa-node"></i>
-            Node.js
-          </span>
-          <span class="learning-tag">
-            <i class="fas fa-cloud"></i>
-            DevOps
-          </span>
+      <!-- Languages -->
+      <div class="languages-strip" data-aos>
+        <h3 class="strip-title"><i class="fas fa-language"></i> Idiomas</h3>
+        <div class="lang-grid">
+          <div class="lang-item"><span class="lang-name">🇪🇸 Español</span><span class="lang-lvl native">Nativo</span>
+          </div>
+          <div class="lang-item"><span class="lang-name">🏴󠁥󠁳󠁣󠁴󠁿 Catalán</span><span
+              class="lang-lvl native">Nativo</span></div>
+          <div class="lang-item"><span class="lang-name">🇲🇦 Amazigh</span><span class="lang-lvl native">Nativo</span>
+          </div>
+          <div class="lang-item"><span class="lang-name">🇬🇧 Inglés</span><span class="lang-lvl b2">B2 / Pre-C1</span>
+          </div>
+          <div class="lang-item"><span class="lang-name">🇸🇦 Árabe</span><span class="lang-lvl inter">Intermedio</span>
+          </div>
+          <div class="lang-item"><span class="lang-name">🇫🇷 Francés</span><span class="lang-lvl basic">Básico</span>
+          </div>
+          <div class="lang-item"><span class="lang-name">🇩🇪 Alemán</span><span class="lang-lvl basic">Básico</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section class="projects" id="projects">
+  <section class="projects section" id="projects">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Portfolio</span>
-        <h2 class="section-title">Proyectos Destacados</h2>
-        <p class="section-description">
-          Una selección de mis trabajos más recientes y relevantes
-        </p>
+      <div class="section-header" data-aos>
+        <span class="section-label">// proyectos</span>
+        <h2 class="section-title">Lo que he construido</h2>
+        <p class="section-sub">Proyectos reales, código real</p>
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <div class="project-image">
-            <div class="project-gradient gradient-1"></div>
+
+        <!-- Project 1 — AVI (featured) -->
+        <div class="project-card featured" data-aos>
+          <div class="project-img">
+            <div class="project-gradient" style="--g1:#f093fb;--g2:#f5576c;--g3:#fd746c"></div>
             <div class="project-overlay">
-              <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+              <div class="project-links-overlay">
+                <a href="#" class="plink" title="Código"><i class="fab fa-github"></i></a>
+              </div>
             </div>
+            <div class="project-badge">Marketplace</div>
           </div>
-          <div class="project-content">
-            <div class="project-header">
-              <h3 class="project-title">Portfolio Personal</h3>
-              <span class="project-category">Web Personal</span>
-            </div>
-            <p class="project-description">
-              Mi espacio personal en la web. Un diseño moderno y minimalista enfocado en la
-              experiencia de usuario y la presentación de proyectos.
-            </p>
+          <div class="project-body">
+            <h3>AVI — Compraventa de Vehículos</h3>
+            <p>Plataforma web completa para compra y venta de vehículos. Incluye registro de usuarios, publicación de
+              anuncios, búsqueda con filtros avanzados y gestión de favoritos.</p>
             <div class="project-tech">
-              <span class="tech-tag">HTML5</span>
-              <span class="tech-tag">CSS3</span>
-              <span class="tech-tag">JavaScript</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/ismaacha" class="project-btn" target="_blank">
-                <i class="fab fa-github"></i>
-                Código
-              </a>
+              <span>PHP</span><span>JavaScript</span><span>MySQL</span><span>Bootstrap</span>
             </div>
           </div>
         </div>
 
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-image">
-            <div class="project-gradient gradient-2"></div>
+        <!-- Project 2 — Hotel App -->
+        <div class="project-card" data-aos>
+          <div class="project-img">
+            <div class="project-gradient" style="--g1:#4facfe;--g2:#00f2fe;--g3:#00c6ff"></div>
             <div class="project-overlay">
-              <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+              <div class="project-links-overlay">
+                <a href="#" class="plink" title="Código"><i class="fab fa-github"></i></a>
+              </div>
             </div>
+            <div class="project-badge">Backend</div>
           </div>
-          <div class="project-content">
-            <div class="project-header">
-              <h3 class="project-title">App de Gestión Hotelera</h3>
-              <span class="project-category">Gestión / Backend</span>
-            </div>
-            <p class="project-description">
-              Sistema robusto para la gestión integral de un hotel. Manejo de reservas,
-              habitaciones, clientes y facturación.
-            </p>
+          <div class="project-body">
+            <h3>App Gestión Hotelera</h3>
+            <p>Sistema de gestión integral de un hotel: reservas, habitaciones, clientes y facturación. API REST con
+              Spring Boot y persistencia en MySQL.</p>
             <div class="project-tech">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Spring Boot</span>
-              <span class="tech-tag">MySQL</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-btn">
-                <i class="fab fa-github"></i>
-                Código
-              </a>
+              <span>Java</span><span>Spring Boot</span><span>MySQL</span>
             </div>
           </div>
         </div>
 
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="project-image">
-            <div class="project-gradient gradient-3"></div>
+        <!-- Project 3 — Restaurante Nor -->
+        <div class="project-card" data-aos>
+          <div class="project-img">
+            <div class="project-gradient" style="--g1:#f7971e;--g2:#ffd200;--g3:#ff6b6b"></div>
             <div class="project-overlay">
-              <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+              <div class="project-links-overlay">
+                <a href="#" class="plink" title="Ver web"><i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="plink" title="Código"><i class="fab fa-github"></i></a>
+              </div>
             </div>
+            <div class="project-badge">Web corporativa</div>
           </div>
-          <div class="project-content">
-            <div class="project-header">
-              <h3 class="project-title">Restaurante Nor</h3>
-              <span class="project-category">Web Corporativa</span>
-            </div>
-            <p class="project-description">
-              Sitio web elegante para un restaurante de alta cocina. Menú interactivo,
-              galería de platos y sistema de contacto.
-            </p>
+          <div class="project-body">
+            <h3>Restaurante Nor</h3>
+            <p>Web elegante para un restaurante. Menú interactivo, galería de platos, información del local y formulario
+              de contacto. Diseño responsivo cuidado al detalle.</p>
             <div class="project-tech">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-btn">
-                <i class="fas fa-external-link-alt"></i>
-                Visitar
-              </a>
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
             </div>
           </div>
         </div>
 
-        <!-- Project 4 -->
-        <div class="project-card">
-          <div class="project-image">
-            <div class="project-gradient gradient-4"></div>
+        <!-- Project 4 — Epic-Customs -->
+        <div class="project-card" data-aos>
+          <div class="project-img">
+            <div class="project-gradient" style="--g1:#667eea;--g2:#764ba2;--g3:#6b73ff"></div>
             <div class="project-overlay">
-              <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+              <div class="project-links-overlay">
+                <a href="#" class="plink" title="Ver web"><i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="plink" title="Código"><i class="fab fa-github"></i></a>
+              </div>
             </div>
+            <div class="project-badge">Landing page</div>
           </div>
-          <div class="project-content">
-            <div class="project-header">
-              <h3 class="project-title">AVI - Compraventa de Vehículos</h3>
-              <span class="project-category">Marketplace</span>
-            </div>
-            <p class="project-description">
-              Plataforma dinámica para la compra y venta de vehículos. Incluye filtrado
-              avanzado, perfiles de usuario y gestión de anuncios.
-            </p>
+          <div class="project-body">
+            <h3>Epic-Customs</h3>
+            <p>Web estática para empresa de personalización de productos. Proyecto académico con diseño limpio y
+              estructura clara, sin dependencias externas.</p>
             <div class="project-tech">
-              <span class="tech-tag">PHP</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">Bootstrap</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-btn">
-                <i class="fab fa-github"></i>
-                Código
-              </a>
+              <span>HTML5</span><span>CSS3</span>
             </div>
           </div>
         </div>
 
-        <!-- Project 5 -->
-        <div class="project-card">
-          <div class="project-image">
-            <div class="project-gradient gradient-5"></div>
+        <!-- Project 5 — Portfolio -->
+        <div class="project-card" data-aos>
+          <div class="project-img">
+            <div class="project-gradient" style="--g1:#11998e;--g2:#38ef7d;--g3:#11998e"></div>
             <div class="project-overlay">
-              <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+              <div class="project-links-overlay">
+                <a href="https://github.com/ismaacha" target="_blank" class="plink" title="Código"><i
+                    class="fab fa-github"></i></a>
+              </div>
             </div>
+            <div class="project-badge">Personal</div>
           </div>
-          <div class="project-content">
-            <div class="project-header">
-              <h3 class="project-title">Epic-Customs</h3>
-              <span class="project-category">Landing Page</span>
-            </div>
-            <p class="project-description">
-              Web estática desarrollada como proyecto académico. Diseño limpio y directo
-              enfocado en la personalización de productos.
-            </p>
+          <div class="project-body">
+            <h3>Portfolio Personal</h3>
+            <p>Este mismo portfolio. SPA con partículas interactivas, cursor personalizado, animaciones por scroll y
+              modo oscuro. Código 100% vanilla.</p>
             <div class="project-tech">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-btn">
-                <i class="fab fa-github"></i>
-                Código
-              </a>
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- Experience Section -->
-  <section class="experience" id="experience">
+  <section class="experience section" id="experience">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Trayectoria</span>
-        <h2 class="section-title">Experiencia Profesional</h2>
-        <p class="section-description">
-          Mi recorrido profesional y las experiencias que me han formado
-        </p>
+      <div class="section-header" data-aos>
+        <span class="section-label">// experiencia</span>
+        <h2 class="section-title">Trayectoria</h2>
       </div>
 
-      <div class="timeline">
-        <!-- Experience 1 -->
+      <div class="timeline" data-aos>
         <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3 class="timeline-title">Prácticas – Piscinas Vilaseca</h3>
-              <span class="timeline-date">
-                <i class="fas fa-calendar"></i>
-                Octubre 2023 – Febrero 2024
-              </span>
+          <div class="tl-dot"></div>
+          <div class="tl-date">Oct 2023 — Feb 2024</div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <h3>Prácticas — Piscinas Vilaseca</h3>
+              <span class="tl-tag">DAW · Prácticas</span>
             </div>
-            <p class="timeline-description">
-              Participé en la administración de la base de datos de clientes e inventario.
-            </p>
-            <ul class="timeline-list">
-              <li>Diseño y optimización de consultas SQL para la generación de reportes mensuales</li>
-              <li>Actualización y mantenimiento de registros de stock (piezas, productos químicos, mobiliario)</li>
-              <li>Implementación de backups automáticos y verificación de integridad de datos</li>
-              <li>Interacción con el equipo comercial para ajustar precios e inventarios en tiempo real</li>
+            <p>Administración de la base de datos de clientes e inventario. Diseñé y optimicé consultas SQL para
+              reportes mensuales, gestioné registros de stock y configuré backups automáticos.</p>
+            <ul class="tl-list">
+              <li>Optimización de queries: <strong>-20% tiempo en informes</strong></li>
+              <li>Mantenimiento de stock de más de 500 referencias</li>
+              <li>Coordinación directa con el equipo comercial</li>
             </ul>
-            <div class="timeline-achievement">
-              <i class="fas fa-trophy"></i>
-              Reducción del 20% en tiempo de acceso a informes
-            </div>
+            <div class="tl-tech"><span>MySQL</span><span>SQL</span></div>
           </div>
         </div>
 
-        <!-- Experience 2 -->
         <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3 class="timeline-title">Práctica Front-End – Agencia Digital XYZ</h3>
-              <span class="timeline-date">
-                <i class="fas fa-calendar"></i>
-                Marzo 2024 – Julio 2024
-              </span>
+          <div class="tl-dot current"></div>
+          <div class="tl-date">Sep 2023 — Presente</div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <h3>CFGS Desarrollo de Aplicaciones Web</h3>
+              <span class="tl-tag">Formación</span>
             </div>
-            <p class="timeline-description">
-              Realicé prácticas en una agencia digital donde colaboré en varios proyectos de clientes.
-            </p>
-            <ul class="timeline-list">
-              <li>Desarrollo de componentes interactivos con JavaScript (sliders, modales y menús dinámicos)</li>
-              <li>Implementación de diseños responsivos usando CSS Grid y Flexbox</li>
-              <li>Trabajo colaborativo con diseñadores UI/UX para llevar wireframes a prototipos funcionales</li>
-              <li>Optimización de páginas para mejorar el performance (minificación de CSS/JS y carga diferida)</li>
-            </ul>
-            <div class="timeline-achievement">
-              <i class="fas fa-trophy"></i>
-              Mejora del 30% en velocidad de carga
-            </div>
-          </div>
-        </div>
-
-        <!-- Experience 3 -->
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3 class="timeline-title">Voluntariado – Talleres para Jóvenes Programadores</h3>
-              <span class="timeline-date">
-                <i class="fas fa-calendar"></i>
-                Septiembre 2023 – Presente
-              </span>
-            </div>
-            <p class="timeline-description">
-              Colaboro como mentor en talleres locales para jóvenes interesados en programación.
-            </p>
-            <ul class="timeline-list">
-              <li>Imparto clases básicas de HTML y CSS a grupos de 10-15 alumnos</li>
-              <li>Organizo desafíos de mini-hackathons con premios simbólicos</li>
-              <li>Asisto en la corrección de proyectos finales y doy feedback en cada entrega</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Education & Languages -->
-      <div class="additional-info">
-        <div class="info-card">
-          <div class="info-header">
-            <i class="fas fa-graduation-cap"></i>
-            <h3>Formación Académica</h3>
-          </div>
-          <div class="info-item">
-            <h4>Desarrollo de Aplicaciones Web (DAW)</h4>
-            <span class="info-date">Septiembre 2022 – Presente</span>
-            <p>Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web</p>
-          </div>
-          <div class="info-item">
-            <h4>Bachillerato en Ciencias Sociales</h4>
-            <span class="info-date">Septiembre 2020 – Junio 2022</span>
-          </div>
-        </div>
-
-        <div class="info-card">
-          <div class="info-header">
-            <i class="fas fa-language"></i>
-            <h3>Idiomas</h3>
-          </div>
-          <div class="language-grid">
-            <div class="language-item">
-              <span class="language-name">Español</span>
-              <span class="language-level">Nativo</span>
-            </div>
-            <div class="language-item">
-              <span class="language-name">Catalán</span>
-              <span class="language-level">Nativo</span>
-            </div>
-            <div class="language-item">
-              <span class="language-name">Inglés</span>
-              <span class="language-level">B2 / Pre C1</span>
-            </div>
-            <div class="language-item">
-              <span class="language-name">Árabe</span>
-              <span class="language-level">Intermedio</span>
-            </div>
-            <div class="language-item">
-              <span class="language-name">Amazigh</span>
-              <span class="language-level">Nativo</span>
-            </div>
-            <div class="language-item">
-              <span class="language-name">Francés</span>
-              <span class="language-level">Básico</span>
-            </div>
-            <div class="language-item">
-              <span class="language-name">Alemán</span>
-              <span class="language-level">Básico</span>
-            </div>
+            <p>Ciclo Formativo de Grado Superior en desarrollo web. Proyectos prácticos en frontend, backend, bases de
+              datos y gestión de proyectos en equipo.</p>
+            <div class="tl-tech">
+              <span>HTML</span><span>CSS</span><span>JS</span><span>Java</span><span>PHP</span><span>MySQL</span></div>
           </div>
         </div>
       </div>
@@ -736,107 +554,80 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="contact" id="contact">
+  <section class="contact section" id="contact">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Hablemos</span>
-        <h2 class="section-title">Contacto</h2>
-        <p class="section-description">
-          ¿Tienes un proyecto en mente? Trabajemos juntos
-        </p>
+      <div class="section-header" data-aos>
+        <span class="section-label">// contacto</span>
+        <h2 class="section-title">Hablemos</h2>
+        <p class="section-sub">¿Tienes un proyecto? Cuéntame</p>
       </div>
 
-      <div class="contact-content">
-        <div class="contact-info">
-          <h3>Información de Contacto</h3>
-          <p class="contact-intro">
-            Estoy disponible para proyectos freelance, colaboraciones o simplemente para charlar sobre tecnología.
-          </p>
+      <div class="contact-grid" data-aos>
+        <div class="contact-left">
+          <p class="contact-intro">Estoy disponible para proyectos, colaboraciones o simplemente para charlar sobre
+            tecnología y código.</p>
 
-          <div class="contact-methods">
-            <a href="mailto:contacto@ismaelachamrouk.com" class="contact-method">
-              <div class="method-icon">
-                <i class="fas fa-envelope"></i>
+          <div class="contact-links">
+            <a href="mailto:contacto@ismaelachamrouk.com" class="contact-item">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div class="ci-info">
+                <span>Email</span>
+                <strong>contacto@ismaelachamrouk.com</strong>
               </div>
-              <div class="method-info">
-                <span class="method-label">Email</span>
-                <span class="method-value">contacto@ismaelachamrouk.com</span>
-              </div>
+              <i class="fas fa-arrow-right ci-arrow"></i>
             </a>
-
-            <a href="https://github.com/ismaacha" target="_blank" class="contact-method">
-              <div class="method-icon">
-                <i class="fab fa-github"></i>
+            <a href="https://github.com/ismaacha" target="_blank" class="contact-item">
+              <div class="ci-icon"><i class="fab fa-github"></i></div>
+              <div class="ci-info">
+                <span>GitHub</span>
+                <strong>github.com/ismaacha</strong>
               </div>
-              <div class="method-info">
-                <span class="method-label">GitHub</span>
-                <span class="method-value">github.com/ismaacha</span>
-              </div>
+              <i class="fas fa-arrow-right ci-arrow"></i>
             </a>
-
-            <a href="https://linkedin.com/in/ismaelachamrouk" target="_blank" class="contact-method">
-              <div class="method-icon">
-                <i class="fab fa-linkedin"></i>
+            <a href="https://linkedin.com/in/ismaelachamrouk" target="_blank" class="contact-item">
+              <div class="ci-icon"><i class="fab fa-linkedin"></i></div>
+              <div class="ci-info">
+                <span>LinkedIn</span>
+                <strong>linkedin.com/in/ismaelachamrouk</strong>
               </div>
-              <div class="method-info">
-                <span class="method-label">LinkedIn</span>
-                <span class="method-value">linkedin.com/in/ismaelachamrouk</span>
-              </div>
+              <i class="fas fa-arrow-right ci-arrow"></i>
             </a>
-
-            <div class="contact-method">
-              <div class="method-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="method-info">
-                <span class="method-label">Ubicación</span>
-                <span class="method-value">Tarragona, España</span>
+            <div class="contact-item no-link">
+              <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="ci-info">
+                <span>Ubicación</span>
+                <strong>Tarragona, España</strong>
               </div>
             </div>
-          </div>
-
-          <div class="social-links">
-            <a href="https://github.com/ismaacha" target="_blank" class="social-link">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="#" target="_blank" class="social-link">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="#" target="_blank" class="social-link">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" target="_blank" class="social-link">
-              <i class="fab fa-instagram"></i>
-            </a>
           </div>
         </div>
 
         <form class="contact-form" id="contact-form">
-          <div class="form-group">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            </div>
           </div>
-
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-          </div>
-
           <div class="form-group">
             <label for="subject">Asunto</label>
-            <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required>
+            <input type="text" id="subject" name="subject" placeholder="¿De qué se trata?" required>
           </div>
-
           <div class="form-group">
             <label for="message">Mensaje</label>
-            <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..."
-              required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..."></textarea>
           </div>
-
           <button type="submit" class="btn btn-primary btn-block">
-            <span>Enviar Mensaje</span>
+            <span>Enviar mensaje</span>
             <i class="fas fa-paper-plane"></i>
           </button>
+          <div class="form-success" id="form-success">
+            <i class="fas fa-check-circle"></i> ¡Mensaje enviado! Te respondo pronto.
+          </div>
         </form>
       </div>
     </div>
@@ -845,57 +636,23 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <h3 class="footer-logo">Ismael Achamrouk</h3>
-          <p class="footer-description">
-            Desarrollador Web Full Stack apasionado por crear experiencias digitales excepcionales.
-          </p>
-        </div>
-
-        <div class="footer-links">
-          <h4>Enlaces Rápidos</h4>
-          <ul>
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-contact">
-          <h4>Contacto</h4>
-          <ul>
-            <li>
-              <i class="fas fa-envelope"></i>
-              contacto@ismaelachamrouk.com
-            </li>
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              Tarragona, España
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2025 Ismael Achamrouk. Todos los derechos reservados.</p>
-        <div class="footer-social">
-          <a href="https://github.com/ismaacha" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <div class="footer-inner">
+        <span class="footer-logo">&lt;isma_acha /&gt;</span>
+        <p>Diseñado y construido por Ismael Achamrouk · 2025</p>
+        <div class="footer-socials">
+          <a href="https://github.com/ismaacha" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/ismaelachamrouk" target="_blank" aria-label="LinkedIn"><i
+              class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Back to Top Button -->
-  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <!-- Custom JavaScript -->
   <script src="js/script.js"></script>
 </body>
 
